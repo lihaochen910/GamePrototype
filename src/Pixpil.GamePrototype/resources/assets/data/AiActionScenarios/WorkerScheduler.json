@@ -1,0 +1,113 @@
+{
+  "$type": "Pixpil.Assets.AiActionScenarioAsset",
+  "Actions": [
+    {
+      "Name": "Do Nothing",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionWaitForSecond",
+          "Time": 1,
+          "UseUnscaledDeltaTime": false,
+          "StatusWhenFinish": 0,
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Build Quarry",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionAssignConstructionTask",
+          "TargetType": 2,
+          "ConstructAI": "ff3dfd1d-48c6-47f4-a1a7-a525c197c544",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Do Quarry Work",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionAssignDoWorkTask",
+          "TargetType": 2,
+          "JobAI": "e0c774e5-531e-4cee-8478-9493d578153e",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Build SawMill",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionAssignConstructionTask",
+          "TargetType": 4,
+          "ConstructAI": "ff3dfd1d-48c6-47f4-a1a7-a525c197c544",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Do SawMill Work",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionAssignDoWorkTask",
+          "TargetType": 4,
+          "JobAI": "4cb5bd7d-e252-4b91-a660-e9ec2f60c3a4",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Build Dormitry",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionAssignConstructionTask",
+          "TargetType": 0,
+          "ConstructAI": "ff3dfd1d-48c6-47f4-a1a7-a525c197c544",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Build LightHouse",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionAssignConstructionTask",
+          "TargetType": 1,
+          "ConstructAI": "ff3dfd1d-48c6-47f4-a1a7-a525c197c544",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    }
+  ],
+  "Name": "WorkerScheduler",
+  "Guid": "1758eead-39bf-4a1c-a18d-5f62269ba520"
+}

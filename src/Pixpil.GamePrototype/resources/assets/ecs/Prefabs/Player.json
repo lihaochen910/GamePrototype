@@ -1,0 +1,147 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": false,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "Player",
+  "Guid": "ea8d1279-8149-471d-a1d6-250022cc18c3",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "b74cd985-40be-4721-8256-825df72ff009",
+    "name": "Player",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.CameraFollowComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.CameraFollowComponent",
+        "Enabled": true,
+        "Style": 2
+      },
+      "Pixpil.Components.PlayerComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.PlayerComponent",
+        "CurrentState": 0
+      },
+      "Murder.Components.AgentComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.AgentComponent",
+        "Speed": 120,
+        "Acceleration": 200,
+        "Friction": 0.916
+      },
+      "Murder.Components.AgentImpulseComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.AgentImpulseComponent",
+        "Impulse": {
+          "X": 0,
+          "Y": 0
+        }
+      },
+      "Murder.Components.VelocityComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.VelocityComponent",
+        "Velocity": {
+          "X": 0,
+          "Y": 0
+        }
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 8,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 34,
+            "Height": 19,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": 0,
+              "Y": 27
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "cee99b31-38c5-82e4-10ba-6e6a250efaea",
+        "HighlightStyle": 0,
+        "NextAnimations": [],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0.137,
+          "Y": 0.073
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Interactions.InteractorComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Interactions.InteractorComponent"
+      },
+      "Pixpil.Components.DayMessageListenerComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.DayMessageListenerComponent"
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": true,
+        "Cells": []
+      }
+    },
+    "children": {
+      "0b229bab-cf93-432c-851a-7a30e799b04e": {
+        "IsDeactivated": true,
+        "ActivateWithParent": false,
+        "guid": "0b229bab-cf93-432c-851a-7a30e799b04e",
+        "name": "ClearDarkFog",
+        "components": {
+          "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.PositionComponent",
+            "x": 16,
+            "y": 27
+          },
+          "Pixpil.Components.ClearDarkFogOnTouchComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Pixpil.Components.ClearDarkFogOnTouchComponent"
+          },
+          "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.ColliderComponent",
+            "Layer": 0,
+            "Shapes": [
+              {
+                "$type": "Murder.Core.Geometry.CircleShape",
+                "Radius": 50,
+                "Offset": {
+                  "X": 0,
+                  "Y": 0
+                }
+              }
+            ],
+            "DebugColor": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

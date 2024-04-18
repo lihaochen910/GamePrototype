@@ -1,0 +1,232 @@
+{
+  "$type": "Pixpil.Assets.GoapScenarioAsset",
+  "ConditionDefines": [
+    "No Constructing Task",
+    "Has Idle Worker",
+    "Has Quarry",
+    "Any Quarry Is Working",
+    "Lack Resource: stone",
+    "Lack Resource: wood",
+    "Has Quarry Build Pending",
+    "Has SawMill",
+    "Has SawMill Build Pending",
+    "Any SawMill Is Working",
+    "Has Dormitry",
+    "Has Dormitry Build Pending",
+    "Need Assign Worker For Constructing",
+    "Has Quarry Build Res",
+    "Has SawMill Build Res",
+    "Has Dormitry Build Res",
+    "Final",
+    "Has LightHouse",
+    "Has LightHouse Build Pending",
+    "Has LightHouse Build Res"
+  ],
+  "Actions": [
+    {
+      "Name": "Build Quarry",
+      "Cost": 2,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Has Quarry Build Pending": true,
+        "Has Idle Worker": true,
+        "Has Quarry Build Res": true
+      },
+      "Post": {
+        "Has Quarry Build Pending": true,
+        "Final": true,
+        "No Constructing Task": true
+      }
+    },
+    {
+      "Name": "Do Quarry Work",
+      "Cost": 2,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Has Quarry": true,
+        "Lack Resource: stone": true,
+        "Has Idle Worker": true
+      },
+      "Post": {
+        "Any Quarry Is Working": true,
+        "Lack Resource: stone": false
+      }
+    },
+    {
+      "Name": "Build SawMill",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Has SawMill Build Pending": true,
+        "Has SawMill Build Res": true,
+        "Has Idle Worker": true
+      },
+      "Post": {
+        "Has SawMill": true,
+        "Final": true,
+        "No Constructing Task": true
+      }
+    },
+    {
+      "Name": "Do SawMill Work",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Lack Resource: wood": true,
+        "Has SawMill": true,
+        "Has Idle Worker": true
+      },
+      "Post": {
+        "Lack Resource: wood": false
+      }
+    },
+    {
+      "Name": "Build Dormitry",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Has Dormitry Build Res": true,
+        "Has Dormitry Build Pending": true,
+        "Has Idle Worker": true
+      },
+      "Post": {
+        "Final": true,
+        "No Constructing Task": true
+      }
+    },
+    {
+      "Name": "Build LightHouse",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Has LightHouse Build Res": true,
+        "Has LightHouse Build Pending": true,
+        "Has Idle Worker": true
+      },
+      "Post": {
+        "Has LightHouse": true,
+        "Final": true
+      }
+    },
+    {
+      "Name": "Build Other",
+      "Cost": 1,
+      "IsActived": false,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Need Assign Worker For Constructing": true,
+        "Has Idle Worker": true
+      },
+      "Post": {
+        "Need Assign Worker For Constructing": false,
+        "No Constructing Task": true
+      }
+    }
+  ],
+  "Goals": [
+    {
+      "Name": "Active Spring",
+      "Conditions": {
+        "Final": true
+      },
+      "IsDefault": true
+    }
+  ],
+  "Conditions": {
+    "Lack Resource: wood": {
+      "$type": "Pixpil.AI.CheckPlayerInventory",
+      "ItemId": "wood",
+      "Method": 4,
+      "CompareToCount": 0
+    },
+    "Has LightHouse Build Res": {
+      "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+      "BuildingPrefab": "af63851c-00a9-4229-9c65-5f6d774341fc"
+    },
+    "Has SawMill": {
+      "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+      "BuildingType": 4
+    },
+    "Has LightHouse": {
+      "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+      "BuildingType": 1
+    },
+    "Has Quarry Build Pending": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+      "Type": 2
+    },
+    "Has Dormitry Build Res": {
+      "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+      "BuildingPrefab": "a00e3aff-4cee-4b57-aa10-ebf8c038d03c"
+    },
+    "Has Quarry": {
+      "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+      "BuildingType": 2
+    },
+    "Has SawMill Build Pending": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+      "Type": 4
+    },
+    "Need Assign Worker For Constructing": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldConstructingNeedWorker"
+    },
+    "Has SawMill Build Res": {
+      "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+      "BuildingPrefab": "16366b8f-6a33-4536-9409-b05b450db8c5"
+    },
+    "Has LightHouse Build Pending": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+      "Type": 1
+    },
+    "Final": {
+      "$type": "Pixpil.AI.AlwaysFalseCondition"
+    },
+    "No Constructing Task": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckNoConstructingTask"
+    },
+    "Any Quarry Is Working": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingHasWorkerInWorking",
+      "Type": 2
+    },
+    "Lack Resource: stone": {
+      "$type": "Pixpil.AI.CheckPlayerInventory",
+      "ItemId": "stone",
+      "Method": 4,
+      "CompareToCount": 0
+    },
+    "Any SawMill Is Working": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingHasWorkerInWorking",
+      "Type": 4
+    },
+    "Has Dormitry": {
+      "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+      "BuildingType": 0
+    },
+    "Has Dormitry Build Pending": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+      "Type": 0
+    },
+    "Has Idle Worker": {
+      "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+    },
+    "Has Quarry Build Res": {
+      "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+      "BuildingPrefab": "ce215055-0968-43d7-9967-d34b0959f585"
+    }
+  },
+  "Name": "WorkerSchedulerAI",
+  "Guid": "4fc07625-b4fa-408c-987e-df531b27e24e"
+}

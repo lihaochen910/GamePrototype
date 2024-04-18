@@ -1,0 +1,37 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": true,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "PlayerStart",
+  "Guid": "cf11e157-a04e-4cae-9043-0a21f043043b",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "52a18e34-23a3-4806-9005-8b0f9dde6b3b",
+    "name": "PlayerStart",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Pixpil.Components.PlayerStartComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.PlayerStartComponent"
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": []
+      }
+    }
+  }
+}

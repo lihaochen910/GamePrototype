@@ -1,0 +1,19 @@
+{
+  "$type": "Pixpil.Assets.LibraryAsset",
+  "UiSkin": "b50fbd13-b0f4-4ac3-9b94-e01c93d7446b",
+  "Player": "ea8d1279-8149-471d-a1d6-250022cc18c3",
+  "Worker": "19cdca59-1b18-4629-b8cd-dc3ca70875ba",
+  "DarkFogTileset": "cfe9222d-82e2-4a2f-8539-d76c2c91656e",
+  "LightHouse": "af63851c-00a9-4229-9c65-5f6d774341fc",
+  "Quarry": "ce215055-0968-43d7-9967-d34b0959f585",
+  "Dormitry": "a00e3aff-4cee-4b57-aa10-ebf8c038d03c",
+  "SawMill": "16366b8f-6a33-4536-9409-b05b450db8c5",
+  "Farm": "00000000-0000-0000-0000-000000000000",
+  "SpringCollector": "00000000-0000-0000-0000-000000000000",
+  "WorkerAI_Idle": "2e8648ae-be85-495c-bee7-c34e7a3eed7a",
+  "WorkerAI_Constructor": "ff3dfd1d-48c6-47f4-a1a7-a525c197c544",
+  "WorkerAI_Quarry": "e0c774e5-531e-4cee-8478-9493d578153e",
+  "PlayerSpeaker": "00000000-0000-0000-0000-000000000000",
+  "Name": "GameLibrary",
+  "Guid": "273340a6-f484-4ac6-9ddc-9fc25c19dd70"
+}

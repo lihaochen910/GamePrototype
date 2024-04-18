@@ -1,0 +1,334 @@
+{
+  "$type": "Pixpil.Assets.GoapScenarioAsset",
+  "ConditionDefines": [
+    "LowBattery",
+    "BatteryIsEmpty",
+    "HasPendingConstructBuilding",
+    "NoEnoughResource",
+    "TimeNearDusk",
+    "IsNothingToDo",
+    "At Home",
+    "At TargetBuilding",
+    "At ResourcePoint",
+    "Found Home",
+    "Found ResourcePoint",
+    "Found TargetBuilding",
+    "World Has Dormitry"
+  ],
+  "Actions": [
+    {
+      "Name": "Idle",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "IsNothingToDo": true
+      },
+      "Post": {
+        "BatteryIsEmpty": false,
+        "LowBattery": false
+      }
+    },
+    {
+      "Name": "Collect",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "NoEnoughResource": true,
+        "At ResourcePoint": true
+      },
+      "Post": {
+        "NoEnoughResource": false
+      }
+    },
+    {
+      "Name": "Construct",
+      "Cost": 2,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionSetBooleanBBVar",
+          "VarName": "IsConstructing",
+          "Value": true,
+          "ElapsedTime": 0
+        },
+        {
+          "$type": "Pixpil.AI.Actions.ActionSetBooleanBBVarOnPost",
+          "VarName": "IsConstructing",
+          "Value": false,
+          "ElapsedTime": 0
+        },
+        {
+          "$type": "Pixpil.AI.Actions.ActionSetIntBBVarOnPost",
+          "VarName": "TargetBuilding",
+          "Value": -1,
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "NoEnoughResource": false,
+        "HasPendingConstructBuilding": true,
+        "At TargetBuilding": true
+      },
+      "Post": {
+        "NoEnoughResource": true,
+        "HasPendingConstructBuilding": false
+      }
+    },
+    {
+      "Name": "Rest",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionCheckGoapCondition",
+          "Condition": "LowBattery",
+          "StatusWhileTrue": 2,
+          "StatusWhileFalse": 0,
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "LowBattery": true
+      },
+      "Post": {
+        "BatteryIsEmpty": false,
+        "LowBattery": false
+      }
+    },
+    {
+      "Name": "Sleep",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "TimeNearDusk": true,
+        "At Home": true
+      },
+      "Post": {
+        "TimeNearDusk": false,
+        "BatteryIsEmpty": false,
+        "LowBattery": false
+      }
+    },
+    {
+      "Name": "Go Home",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Found Home": true,
+        "At Home": false
+      },
+      "Post": {
+        "At Home": true
+      }
+    },
+    {
+      "Name": "Find Home",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionFindWorldSpecifyBuilding",
+          "BuildingType": 0,
+          "WriteToBBValue": "Home",
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "Found Home": false,
+        "World Has Dormitry": true
+      },
+      "Post": {
+        "Found Home": true
+      }
+    },
+    {
+      "Name": "Go TargetBuilding",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionGotoEntityViaBBVar",
+          "BBVar": "TargetBuilding",
+          "Algorithm": 1,
+          "MinDistance": 2,
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "Found TargetBuilding": true,
+        "At TargetBuilding": false
+      },
+      "Post": {
+        "At TargetBuilding": true
+      }
+    },
+    {
+      "Name": "Find ResourcePoint",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Found ResourcePoint": false
+      },
+      "Post": {
+        "Found ResourcePoint": true
+      }
+    },
+    {
+      "Name": "Go ResourcePoint",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "At ResourcePoint": false,
+        "Found ResourcePoint": true
+      },
+      "Post": {
+        "At ResourcePoint": true
+      }
+    },
+    {
+      "Name": "Find TargetBuilding",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionFindWorldPendingConstructBuilding",
+          "WriteToBBValue": "TargetBuilding",
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "Found TargetBuilding": false
+      },
+      "Post": {
+        "Found TargetBuilding": true
+      }
+    }
+  ],
+  "Goals": [
+    {
+      "Name": "Find Sprint",
+      "Conditions": {
+        "NoEnoughResource": false,
+        "HasPendingConstructBuilding": false
+      },
+      "IsDefault": false
+    },
+    {
+      "Name": "Rest",
+      "Conditions": {
+        "BatteryIsEmpty": false,
+        "LowBattery": false
+      },
+      "IsDefault": false
+    },
+    {
+      "Name": "Go Sleep",
+      "Conditions": {
+        "Found Home": true,
+        "At Home": true,
+        "World Has Dormitry": true
+      },
+      "IsDefault": false
+    },
+    {
+      "Name": "Work",
+      "Conditions": {
+        "HasPendingConstructBuilding": false
+      },
+      "IsDefault": false
+    }
+  ],
+  "Conditions": {
+    "NoEnoughResource": {
+      "$type": "Pixpil.AI.AlwaysFalseCondition"
+    },
+    "HasPendingConstructBuilding": {
+      "$type": "Pixpil.AI.CheckGameplayBlackboardValue",
+      "ValueType": 2,
+      "FieldName": "HasPendingConstructBuilding",
+      "Method": 0,
+      "CompareToInt": 0,
+      "CompareToFloat": 0,
+      "CompareToBool": true
+    },
+    "At ResourcePoint": {
+      "$type": "Pixpil.AI.CheckAgentInBBVarBuildingRange",
+      "BBVar": "ResourcePoint"
+    },
+    "TimeNearDusk": {
+      "$type": "Pixpil.AI.CheckDayPercentileValue",
+      "Method": 1,
+      "Value": 0.7
+    },
+    "Found Home": {
+      "$type": "Pixpil.AI.CheckPPBlackboardIntVariable",
+      "VarName": "Home",
+      "Method": 3,
+      "CompareTo": 0
+    },
+    "BatteryIsEmpty": {
+      "$type": "Pixpil.AI.CheckBatteryPowerCondition",
+      "Method": 4,
+      "Value": 0
+    },
+    "At Home": {
+      "$type": "Pixpil.AI.CheckAgentInBuildingRange",
+      "BuildingType": 0
+    },
+    "LowBattery": {
+      "$type": "Pixpil.AI.CheckBatteryPowerCondition",
+      "Method": 2,
+      "Value": 10
+    },
+    "Found ResourcePoint": {
+      "$type": "Pixpil.AI.CheckPPBlackboardIntVariable",
+      "VarName": "ResourcePoint",
+      "Method": 3,
+      "CompareTo": 0
+    },
+    "Found TargetBuilding": {
+      "$type": "Pixpil.AI.CheckPPBlackboardIntVariable",
+      "VarName": "TargetBuilding",
+      "Method": 3,
+      "CompareTo": 0
+    },
+    "At TargetBuilding": {
+      "$type": "Pixpil.AI.CheckAgentInBBVarBuildingRange",
+      "BBVar": "TargetBuilding"
+    },
+    "IsNothingToDo": {
+      "$type": "Pixpil.AI.GoapConditionCollection",
+      "CheckMode": 0,
+      "Conditions": [
+        {
+          "$type": "Pixpil.AI.CheckGoapScenarioCondition",
+          "Condition": "HasPendingConstructBuilding",
+          "EqualToValue": false
+        }
+      ]
+    },
+    "World Has Dormitry": {
+      "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+      "BuildingType": 0
+    }
+  },
+  "Name": "WorkerAI",
+  "Guid": "7e3fa6e6-ca82-4ccf-85cc-c015e3ad6ade"
+}

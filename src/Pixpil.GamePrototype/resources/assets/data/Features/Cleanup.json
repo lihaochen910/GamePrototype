@@ -1,0 +1,49 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Cleanup",
+  "Guid": "6eedbb62-fd26-47f6-a535-a8a2ddd09285",
+  "systems": [
+    {
+      "Item1": "Murder.Systems.AgentCleanupSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Graphics.RandomizeAsepriteSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Util.DestroyOnAnimationCompleteSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Graphics.SpriteFlashCleanupSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Physics.DestroyOnCollisionSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Physics.RemoveColliderWhenStoppedSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Graphics.ParticleDestroyerSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Utilities.DestroyOnBlackboardConditionSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Utilities.QuestTrackerSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.DestroyAtTimeSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

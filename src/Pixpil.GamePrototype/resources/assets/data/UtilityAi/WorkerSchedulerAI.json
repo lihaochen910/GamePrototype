@@ -1,0 +1,348 @@
+{
+  "$type": "Pixpil.Assets.UtilityAiAsset",
+  "RootReasoner": {
+    "$type": "Pixpil.AI.HighestScoreReasoner",
+    "DefaultConsideration": {
+      "$type": "Pixpil.AI.FixedScoreConsideration",
+      "Score": 0.1,
+      "Action": {
+        "Name": "Do Nothing",
+        "IsActived": true
+      },
+      "Name": ""
+    },
+    "Considerations": [
+      {
+        "$type": "Pixpil.AI.SumOfChildrenWithPreAppraisalsConsideration",
+        "Threshold": 1,
+        "PreCheckMode": 0,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+              "Type": 2
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "OptionalAppraisals": [
+          {
+            "$type": "Pixpil.AI.FixedScoreAppraisal",
+            "Score": 1
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+              "BuildingPrefab": "ce215055-0968-43d7-9967-d34b0959f585"
+            },
+            "ScoreWhenTrue": 0.5,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Build Quarry",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenWithPreAppraisalsConsideration",
+        "Threshold": 1,
+        "PreCheckMode": 0,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": -999
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+              "Type": 4
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "OptionalAppraisals": [
+          {
+            "$type": "Pixpil.AI.FixedScoreAppraisal",
+            "Score": 1
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+              "BuildingPrefab": "16366b8f-6a33-4536-9409-b05b450db8c5"
+            },
+            "ScoreWhenTrue": 0.5,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Build SawMill",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenWithPreAppraisalsConsideration",
+        "Threshold": 1,
+        "PreCheckMode": 0,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+              "Type": 0
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "OptionalAppraisals": [
+          {
+            "$type": "Pixpil.AI.FixedScoreAppraisal",
+            "Score": 1
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+              "BuildingPrefab": "a00e3aff-4cee-4b57-aa10-ebf8c038d03c"
+            },
+            "ScoreWhenTrue": 0.5,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Build Dormitry",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenWithPreAppraisalsConsideration",
+        "Threshold": 1,
+        "PreCheckMode": 0,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+              "BuildingPrefab": "a00e3aff-4cee-4b57-aa10-ebf8c038d03c"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingConstructingNeedWorker",
+              "Type": 1
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "OptionalAppraisals": [
+          {
+            "$type": "Pixpil.AI.FixedScoreAppraisal",
+            "Score": 1
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventoryReadyForBuild",
+              "BuildingPrefab": "af63851c-00a9-4229-9c65-5f6d774341fc"
+            },
+            "ScoreWhenTrue": 0.5,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Build LightHouse",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenWithPreAppraisalsConsideration",
+        "Threshold": 1,
+        "PreCheckMode": 0,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+              "BuildingType": 2
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingNeedWorker",
+              "Type": 2
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "OptionalAppraisals": [
+          {
+            "$type": "Pixpil.AI.FixedScoreAppraisal",
+            "Score": 1
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventory",
+              "ItemId": "stone",
+              "Method": 4,
+              "CompareToCount": 0
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Do Quarry Work",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenWithPreAppraisalsConsideration",
+        "Threshold": 1,
+        "PreCheckMode": 0,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckWorldHasSpecifyBuilding",
+              "BuildingType": 4
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldHasIdleWorker"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.WorkerScheduler.CheckWorldSpecifyBuildingNeedWorker",
+              "Type": 4
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "OptionalAppraisals": [
+          {
+            "$type": "Pixpil.AI.FixedScoreAppraisal",
+            "Score": 1
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckPlayerInventory",
+              "ItemId": "wood",
+              "Method": 4,
+              "CompareToCount": 0
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Do SawMill Work",
+          "IsActived": true
+        },
+        "Name": ""
+      }
+    ]
+  },
+  "Actions": [
+    {
+      "Name": "Build Quarry",
+      "IsActived": true
+    },
+    {
+      "Name": "Do Quarry Work",
+      "IsActived": true
+    },
+    {
+      "Name": "Build SawMill",
+      "IsActived": true
+    },
+    {
+      "Name": "Do SawMill Work",
+      "IsActived": true
+    },
+    {
+      "Name": "Build Dormitry",
+      "IsActived": true
+    },
+    {
+      "Name": "Build LightHouse",
+      "IsActived": true
+    },
+    {
+      "Name": "Build Other",
+      "IsActived": true
+    },
+    {
+      "Name": "Do Nothing",
+      "IsActived": true
+    }
+  ],
+  "Name": "WorkerSchedulerAI",
+  "Guid": "a65de397-4393-4880-afc4-dd0a157fc96d"
+}

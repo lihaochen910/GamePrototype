@@ -1,0 +1,133 @@
+{
+  "$type": "Murder.Assets.Localization.LocalizationAsset",
+  "Name": "Resources",
+  "Guid": "d18740ff-9090-4b5f-8f7e-7d98eaffe1cf",
+  "resources": [
+    {
+      "String": "Welcome to Murder Engine.",
+      "IsGenerated": true,
+      "Guid": "3109f2cf-6e7c-45c9-a5e0-e43656ee517a"
+    },
+    {
+      "String": "Please, make yourself home!!",
+      "IsGenerated": true,
+      "Guid": "76c703af-155f-4e27-9401-0030fca416a0"
+    },
+    {
+      "String": "Sure.",
+      "IsGenerated": true,
+      "Guid": "f0c2677f-eb22-4d89-9c99-a5dc8412e71b"
+    },
+    {
+      "String": "Right?",
+      "IsGenerated": true,
+      "Guid": "fb7ef3fb-433b-4ccb-816c-91eb14aa2a06"
+    },
+    {
+      "String": "\u6B22\u8FCE\uFF01 Murder3\u5F15\u64CE.",
+      "IsGenerated": true,
+      "Guid": "a3185282-cc72-4616-9899-e2b69b72a141"
+    },
+    {
+      "String": "Welcome to Murder.",
+      "IsGenerated": true,
+      "Guid": "6e24fe81-a420-42b1-8b97-2f36c6b5e000"
+    },
+    {
+      "String": "Hello!",
+      "IsGenerated": true,
+      "Guid": "60cef4df-1541-49b7-85c6-a2fda2498f73"
+    },
+    {
+      "String": "\u4E3B\u4EBA\u516C\u5165\u5B66\u8D85\u81EA\u7136\u73B0\u8C61\u4E13\u95E8\u5B66\u6821\u6E29\u6CC9\u79D1\uFF0C\u56E0\u4E3A\u610F\u5916\u53D1\u73B0\u5C0F\u5C0F\u4EBA\u4E16\u754C\uFF0C\u5C55\u5F00\u4E00\u573A\u5F02\u8272\u7684\u6821\u56ED\u751F\u6D3B\u3002",
+      "IsGenerated": true,
+      "Guid": "3bb0e2d6-abae-4523-b183-3b8fd2d1ae8e"
+    },
+    {
+      "String": "\u5973\u4EBA\uFF0C\u4F60\u662F\u5728\u73A9\u706B\uFF01\u73A9\u706B\uFF01",
+      "IsGenerated": true,
+      "Guid": "cc750ae7-a368-4129-a69d-1315ef004f46"
+    },
+    {
+      "String": "Daggers, are you sure you should be texting while driving?",
+      "IsGenerated": true,
+      "Guid": "574281d7-c12f-4e2f-b9bb-43762a22d2d9"
+    },
+    {
+      "String": "Don\u0027t worry Gram-Gram, clients respect aggressive and unrelenting communication.",
+      "IsGenerated": true,
+      "Guid": "34cc758e-6f75-4976-94c8-9e8fcb46b470"
+    },
+    {
+      "String": "\u4E0D\u662F\u5417?",
+      "IsGenerated": true,
+      "Guid": "94685835-a396-40ee-8e55-21122627799f"
+    },
+    {
+      "String": "\u8FD9\u662F\u6807\u9898.",
+      "IsGenerated": true,
+      "Guid": "3816ef23-e031-479e-b583-44090f03236e"
+    },
+    {
+      "String": "\u9009\u98791",
+      "IsGenerated": true,
+      "Guid": "99e4139b-9706-44aa-a71c-e0cd7f104d71"
+    },
+    {
+      "String": "\u9009\u98791\u547D\u4E2D",
+      "IsGenerated": true,
+      "Guid": "5ddd7fc4-ea1b-4ac1-9768-448989b08342"
+    },
+    {
+      "String": "\u9009\u98792",
+      "IsGenerated": true,
+      "Guid": "b665c37b-4250-4582-bc64-0cb84d862c17"
+    },
+    {
+      "String": "\u9009\u98792\u547D\u4E2D",
+      "IsGenerated": true,
+      "Guid": "a4e46ce5-48b9-45c0-9d9a-f4f55626662c"
+    },
+    {
+      "String": "\u9009\u98793",
+      "IsGenerated": true,
+      "Guid": "bb06d965-b745-4c30-adbd-c986ae974c32"
+    },
+    {
+      "String": "\u9009\u98793\u547D\u4E2D",
+      "IsGenerated": true,
+      "Guid": "0b5aa8e7-1bf5-4f53-9988-84a9a66118c5"
+    }
+  ],
+  "dialogueResources": [
+    {
+      "DialogueResourceGuid": "42453574-d09b-42d8-b3e9-6c60e9455f7b",
+      "Resources": [
+        "3109f2cf-6e7c-45c9-a5e0-e43656ee517a",
+        "76c703af-155f-4e27-9401-0030fca416a0",
+        "f0c2677f-eb22-4d89-9c99-a5dc8412e71b",
+        "fb7ef3fb-433b-4ccb-816c-91eb14aa2a06"
+      ]
+    },
+    {
+      "DialogueResourceGuid": "9ed6a3f5-c45f-4834-be41-d7050c44d672",
+      "Resources": [
+        "a3185282-cc72-4616-9899-e2b69b72a141",
+        "6e24fe81-a420-42b1-8b97-2f36c6b5e000",
+        "60cef4df-1541-49b7-85c6-a2fda2498f73",
+        "3bb0e2d6-abae-4523-b183-3b8fd2d1ae8e",
+        "cc750ae7-a368-4129-a69d-1315ef004f46",
+        "574281d7-c12f-4e2f-b9bb-43762a22d2d9",
+        "34cc758e-6f75-4976-94c8-9e8fcb46b470",
+        "94685835-a396-40ee-8e55-21122627799f",
+        "3816ef23-e031-479e-b583-44090f03236e",
+        "99e4139b-9706-44aa-a71c-e0cd7f104d71",
+        "5ddd7fc4-ea1b-4ac1-9768-448989b08342",
+        "b665c37b-4250-4582-bc64-0cb84d862c17",
+        "a4e46ce5-48b9-45c0-9d9a-f4f55626662c",
+        "bb06d965-b745-4c30-adbd-c986ae974c32",
+        "0b5aa8e7-1bf5-4f53-9988-84a9a66118c5"
+      ]
+    }
+  ]
+}

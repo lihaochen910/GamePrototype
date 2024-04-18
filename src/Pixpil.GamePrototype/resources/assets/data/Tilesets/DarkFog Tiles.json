@@ -1,0 +1,21 @@
+{
+  "$type": "Murder.Assets.Graphics.TilesetAsset",
+  "Image": "5865d448-2549-de11-7239-d1287c231abb",
+  "Offset": {
+    "X": 0,
+    "Y": 0
+  },
+  "Size": {
+    "X": 24,
+    "Y": 24
+  },
+  "YSortOffset": 40,
+  "ConsiderOutsideOccupied": false,
+  "CollisionLayer": 65,
+  "Order": 0,
+  "TargetBatch": 0,
+  "AdditionalTiles": [],
+  "Sort": 0.01,
+  "Name": "DarkFog Tiles",
+  "Guid": "cfe9222d-82e2-4a2f-8539-d76c2c91656e"
+}

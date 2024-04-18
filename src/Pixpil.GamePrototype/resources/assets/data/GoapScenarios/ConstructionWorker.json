@@ -1,0 +1,112 @@
+{
+  "$type": "Pixpil.Assets.GoapScenarioAsset",
+  "ConditionDefines": [
+    "At Target",
+    "Has Resource For Target",
+    "Completed",
+    "At Home",
+    "Completed Or NoResource",
+    "Virtual Target"
+  ],
+  "Actions": [
+    {
+      "Name": "Go Target",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "At Target": false
+      },
+      "Post": {
+        "At Target": true
+      }
+    },
+    {
+      "Name": "Construct",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Has Resource For Target": true,
+        "At Target": true,
+        "Completed": false
+      },
+      "Post": {
+        "Completed": true,
+        "Virtual Target": true
+      }
+    },
+    {
+      "Name": "Go Home",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.ActionSetGoapAgentComponent",
+          "GoapAgentComponent": {
+            "GoapScenarioAsset": "ceaf9cb7-7784-4263-9b45-5d35a1d0d1a2",
+            "EvaluateFrequency": 0,
+            "EvaluateInterval": 1,
+            "PlannerChangedOnly": false
+          },
+          "Phase": 8,
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "Completed Or NoResource": true
+      },
+      "Post": {
+        "At Home": true,
+        "Virtual Target": true
+      }
+    }
+  ],
+  "Goals": [
+    {
+      "Name": "Default",
+      "Conditions": {
+        "Virtual Target": true
+      },
+      "IsDefault": true
+    }
+  ],
+  "Conditions": {
+    "Has Resource For Target": {
+      "$type": "Pixpil.AI.CheckWorkerConstructingTargetRequireResourcesEnough"
+    },
+    "Completed Or NoResource": {
+      "$type": "Pixpil.AI.GoapConditionCollection",
+      "CheckMode": 1,
+      "Conditions": [
+        {
+          "$type": "Pixpil.AI.CheckGoapScenarioCondition",
+          "Condition": "Completed",
+          "EqualToValue": true
+        },
+        {
+          "$type": "Pixpil.AI.CheckGoapScenarioCondition",
+          "Condition": "Has Resource For Target",
+          "EqualToValue": false
+        }
+      ]
+    },
+    "At Home": {
+      "$type": "Pixpil.AI.CheckWorkerAtHome"
+    },
+    "At Target": {
+      "$type": "Pixpil.AI.CheckAgentInConstructingTargetRange"
+    },
+    "Completed": {
+      "$type": "Pixpil.AI.CheckWorkerConstructingTargetComplete"
+    },
+    "Virtual Target": {
+      "$type": "Pixpil.AI.AlwaysFalseCondition"
+    }
+  },
+  "Name": "ConstructionWorker",
+  "Guid": "81056d49-ae0e-4c4e-baa1-70fefabe50e7"
+}

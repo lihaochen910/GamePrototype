@@ -1,0 +1,8 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Debug",
+  "Guid": "9603489e-41a7-45ba-9c81-b895a4480ea4",
+  "systems": [],
+  "features": []
+}

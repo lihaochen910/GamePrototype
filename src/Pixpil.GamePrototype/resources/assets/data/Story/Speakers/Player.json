@@ -1,0 +1,14 @@
+{
+  "$type": "Murder.Assets.SpeakerAsset",
+  "SpeakerName": "Player",
+  "DefaultPortrait": "Player",
+  "CustomFont": 107,
+  "Portraits": {
+    "Player": {
+      "Sprite": "cee99b31-38c5-82e4-10ba-6e6a250efaea",
+      "AnimationId": "idle"
+    }
+  },
+  "Name": "Player",
+  "Guid": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd"
+}

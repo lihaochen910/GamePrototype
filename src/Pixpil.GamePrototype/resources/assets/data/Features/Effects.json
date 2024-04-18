@@ -1,0 +1,29 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Effects",
+  "Guid": "8678c349-efee-4510-9a4b-caf532163dfd",
+  "systems": [
+    {
+      "Item1": "Murder.Systems.ParticleRendererSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.ParticleDisableTrackerSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.ParticleTrackerSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.FadeTransitionSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.InteractOnRuleMatchSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

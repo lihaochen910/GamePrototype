@@ -1,0 +1,108 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": true,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "res_Wood_01",
+  "Guid": "c84c5da7-13c4-4f7c-a14e-c7840d30d153",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "be8ed4e0-ce04-40de-bec9-b4f6eb7c48b2",
+    "name": "res_Wood",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "bef030cb-c184-1953-6ed9-ebdbe279525f",
+        "HighlightStyle": 0,
+        "NextAnimations": [
+          ""
+        ],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 2,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 34,
+            "Height": 48,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": 7,
+              "Y": 0
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Pixpil.Components.InteractOnButtonPressComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InteractOnButtonPressComponent",
+        "Priority": 0,
+        "HighlightOnRange": true
+      },
+      "Pixpil.Components.WorldResourceComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.WorldResourceComponent"
+      },
+      "Bang.Interactions.InteractiveComponent\u00601[[Pixpil.Systems.Interactions.CollectWorldResourceOnInteract, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Bang, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Bang.Interactions.InteractiveComponent\u003CPixpil.Systems.Interactions.CollectWorldResourceOnInteract\u003E",
+        "interaction": {}
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": [
+          {
+            "ItemType": {
+              "Id": "wood"
+            },
+            "Count": 200
+          }
+        ]
+      },
+      "Pixpil.Components.WorldResourceRenewableComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.WorldResourceRenewableComponent",
+        "ItemType": {
+          "Id": "wood"
+        },
+        "Max": 200,
+        "Speed": 1,
+        "RenewCount": 100
+      },
+      "Pixpil.Components.InventoryMessageListenerComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryMessageListenerComponent",
+        "ListenType": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Fog",
+  "Guid": "510f0eed-4572-4a91-86e5-8d5042f20de1",
+  "systems": [
+    {
+      "Item1": "Pixpil.Systems.DarkFogInitializerSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.DarkFogUpdateSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

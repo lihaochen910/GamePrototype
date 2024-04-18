@@ -1,0 +1,53 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Character",
+  "Guid": "bb94f00f-05b7-4746-80f8-aa04a1d85687",
+  "systems": [
+    {
+      "Item1": "Pixpil.Systems.PlayerInputSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.CameraFollowSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.SpawnPlayerOnGameBegin, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.ClearDarkFogWhenTouchSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.ClearDarkFogWhenAttachSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.PlacerBuildingSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.AgentDebugMessageSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.AgentInBuildingRangeSensorSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.BatteryChargeSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.BatteryConsumeSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Worker.WorkerDoBuildingSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

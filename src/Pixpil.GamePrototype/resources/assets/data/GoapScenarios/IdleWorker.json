@@ -1,0 +1,90 @@
+{
+  "$type": "Pixpil.Assets.GoapScenarioAsset",
+  "ConditionDefines": [
+    "Has Work To Do",
+    "Do Next",
+    "At Home",
+    "Has Construction Task"
+  ],
+  "Actions": [
+    {
+      "Name": "Stroll",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [],
+      "Pre": {},
+      "Post": {
+        "Do Next": true
+      }
+    },
+    {
+      "Name": "Go Home",
+      "Cost": 0,
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.GoapActionPauseEvaluateOnPreAndResumeOnPost",
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "At Home": false
+      },
+      "Post": {
+        "At Home": true
+      }
+    },
+    {
+      "Name": "See Next",
+      "Cost": 0,
+      "IsActived": false,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "At Home": true,
+        "Do Next": false
+      },
+      "Post": {
+        "Do Next": true
+      }
+    }
+  ],
+  "Goals": [
+    {
+      "Name": "Default",
+      "Conditions": {
+        "Do Next": true
+      },
+      "IsDefault": true
+    }
+  ],
+  "Conditions": {
+    "At Home": {
+      "$type": "Pixpil.AI.CheckWorkerAtHome"
+    },
+    "Has Construction Task": {
+      "$type": "Pixpil.AI.EntityHasSpecifyComponentCondition",
+      "ComponentTypes": [
+        "Pixpil.Components.WorkerWorkConstructComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+      ]
+    },
+    "Do Next": {
+      "$type": "Pixpil.AI.AlwaysFalseCondition"
+    },
+    "Has Work To Do": {
+      "$type": "Pixpil.AI.GoapConditionCollection",
+      "CheckMode": 1,
+      "Conditions": [
+        {
+          "$type": "Pixpil.AI.CheckGoapScenarioCondition",
+          "Condition": "Has Construction Task",
+          "EqualToValue": true
+        }
+      ]
+    }
+  },
+  "Name": "IdleWorker",
+  "Guid": "ceaf9cb7-7784-4263-9b45-5d35a1d0d1a2"
+}

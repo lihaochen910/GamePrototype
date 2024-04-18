@@ -1,0 +1,152 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": false,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "dormitry",
+  "Guid": "a00e3aff-4cee-4b57-aa10-ebf8c038d03c",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "7aa0aceb-2951-4eb3-b77e-8c9f68d884e1",
+    "name": "dormitry",
+    "components": {
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "9ce92d8d-f50d-335e-df8b-b6188061e8d1",
+        "HighlightStyle": 0,
+        "NextAnimations": [],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.Graphics.ScaleComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.Graphics.ScaleComponent",
+        "Scale": {
+          "X": 0.3,
+          "Y": 0.3
+        }
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 8,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 30,
+            "Height": 29,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": 2,
+              "Y": 31
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Pixpil.Components.BuildingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingComponent",
+        "Type": 0
+      },
+      "Pixpil.Components.BuildingConstructRequireResourcesComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingConstructRequireResourcesComponent",
+        "Requires": [
+          {
+            "ItemType": {
+              "Id": "wood"
+            },
+            "Count": 80
+          }
+        ]
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": [
+          {
+            "ItemType": {
+              "Id": "wood"
+            },
+            "Count": 0
+          }
+        ]
+      },
+      "Pixpil.Components.DormitoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.DormitoryComponent",
+        "Capacity": 3
+      },
+      "Pixpil.Components.DormitoryPersonnelSituationComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.DormitoryPersonnelSituationComponent",
+        "IdleStaff": [],
+        "BusyStaff": []
+      },
+      "Pixpil.Components.BuildingWorkersInConstructingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingWorkersInConstructingComponent",
+        "Capcity": 2,
+        "Workers": []
+      }
+    },
+    "children": {
+      "e439fef7-565a-4285-8053-722c25635e1c": {
+        "IsDeactivated": false,
+        "ActivateWithParent": false,
+        "guid": "e439fef7-565a-4285-8053-722c25635e1c",
+        "name": "AgentSensor",
+        "components": {
+          "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.PositionComponent",
+            "x": 0,
+            "y": 0
+          },
+          "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.ColliderComponent",
+            "Layer": 2,
+            "Shapes": [
+              {
+                "$type": "Murder.Core.Geometry.CircleShape",
+                "Radius": 36,
+                "Offset": {
+                  "X": 16,
+                  "Y": 31
+                }
+              }
+            ],
+            "DebugColor": {
+              "R": 0.99609375,
+              "G": 0.47265625,
+              "B": 0.7734375,
+              "A": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

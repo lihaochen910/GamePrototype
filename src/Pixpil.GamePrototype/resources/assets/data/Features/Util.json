@@ -1,0 +1,73 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Util",
+  "Guid": "b87732b1-540a-4268-a524-f059e583389e",
+  "systems": [
+    {
+      "Item1": "Murder.Systems.InteractSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Interactions.InteractOnCollisionSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Interactions.InteractOnButtonPressSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.FadeScreenWithSolidColorSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.BuildingStatusShowSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.BuildingConstructionProgressMonitoringSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.BuildingStatusProgressShowSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.BuildingConstructSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.QuarrySystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.SawMillSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.LightHouseSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.AttachShowRangeLightHouseRangeDuringPlacingSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Building.DrawLightHouseRangeSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.DormitoryPersonnelRecordingSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.DormitoryWorkerSpawnSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.Worker.WorkerConstructionTaskPostProcessSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

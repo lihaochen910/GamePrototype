@@ -1,0 +1,18 @@
+{
+  "$type": "Murder.Assets.SpeakerAsset",
+  "SpeakerName": "WorkerE",
+  "DefaultPortrait": "Idle",
+  "CustomFont": 107,
+  "Portraits": {
+    "Idle": {
+      "Sprite": "e5cd8c2f-1b4f-ba4a-9690-a4df7e7a3bdf",
+      "AnimationId": "idle"
+    },
+    "Walk": {
+      "Sprite": "e5cd8c2f-1b4f-ba4a-9690-a4df7e7a3bdf",
+      "AnimationId": "walk_hand_d"
+    }
+  },
+  "Name": "WorkerE",
+  "Guid": "c22bd788-f565-433c-9510-2589febefe3d"
+}

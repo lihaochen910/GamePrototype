@@ -398,4 +398,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 src/Pixpil.GamePrototype/packed
-
+src/Pixpil.GamePrototype/resources/assets/data/Generated

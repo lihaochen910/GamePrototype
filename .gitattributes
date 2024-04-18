@@ -6,8 +6,8 @@
 *.sln      text eol=crlf
 *.csproj   text eol=crlf
 
-# Unity JSON files
-*.json                  json
+# JSON files
+*.json                  lfs
 
 # Localize Asset
 *.csv					text

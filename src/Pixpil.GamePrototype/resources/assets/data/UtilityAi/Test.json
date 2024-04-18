@@ -1,0 +1,168 @@
+{
+  "$type": "Pixpil.Assets.UtilityAiAsset",
+  "RootReasoner": {
+    "$type": "Pixpil.AI.HighestScoreReasoner",
+    "DefaultConsideration": {
+      "$type": "Pixpil.AI.FixedScoreConsideration",
+      "Score": 0.100000024,
+      "Action": {
+        "Name": "Idle",
+        "IsActived": true
+      },
+      "Name": ""
+    },
+    "Considerations": [
+      {
+        "$type": "Pixpil.AI.SumOfChildrenConsideration",
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.EntityHasSpecifyComponentCondition",
+              "ComponentTypes": [
+                "Pixpil.Components.WorkerWorkConstructComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+              ]
+            },
+            "ScoreWhenTrue": -10,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Stroll",
+          "IsActived": true
+        },
+        "Name": "Stroll Consd"
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenConsideration",
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.EntityHasSpecifyComponentCondition",
+              "ComponentTypes": [
+                "Pixpil.Components.WorkerWorkConstructComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+              ]
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckBuildingConstructRequireResourcesEnough"
+            },
+            "ScoreWhenTrue": 0.3,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckAgentInConstructingTargetRange"
+            },
+            "ScoreWhenTrue": 0.3,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckWorkerConstructingTargetComplete"
+            },
+            "ScoreWhenTrue": 0.3,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Construct",
+          "IsActived": true
+        },
+        "Name": "Construct Consd"
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenConsideration",
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckWorkerAtHome"
+            },
+            "ScoreWhenTrue": -10,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckWorkerConstructingTargetComplete"
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Go Home",
+          "IsActived": true
+        },
+        "Name": "Go Home"
+      },
+      {
+        "$type": "Pixpil.AI.AllOrNothingConsideration",
+        "Threshold": 1,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.EntityHasSpecifyComponentCondition",
+              "ComponentTypes": [
+                "Pixpil.Components.WorkerWorkConstructComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+              ]
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          },
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckAgentInConstructingTargetRange"
+            },
+            "ScoreWhenTrue": 0,
+            "ScoreWhenFalse": 1
+          }
+        ],
+        "Action": {
+          "Name": "Go Construct Target",
+          "IsActived": true
+        },
+        "Name": ""
+      }
+    ]
+  },
+  "Actions": [
+    {
+      "Name": "Idle",
+      "IsActived": true
+    },
+    {
+      "Name": "Stroll",
+      "IsActived": true
+    },
+    {
+      "Name": "Back Home",
+      "IsActived": true
+    },
+    {
+      "Name": "Construct",
+      "IsActived": true
+    },
+    {
+      "Name": "Go Construct Target",
+      "IsActived": true
+    }
+  ],
+  "Name": "Test",
+  "Guid": "fee56fd0-bd59-4117-ba05-56167d7b8998"
+}

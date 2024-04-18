@@ -1,0 +1,194 @@
+{
+  "$type": "Pixpil.Assets.AiActionScenarioAsset",
+  "Actions": [
+    {
+      "Name": "Stroll",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionStroll",
+          "StrollRadius": 50,
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Back Home",
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionBackDormitory",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Go Construct Target",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionGoConstructingTarget",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Do Construct",
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionConstruct",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Back Home(Finish Construct)",
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionBackDormitory",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        },
+        {
+          "$type": "Pixpil.AI.Actions.SendWorkerEndConstructMessage",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "See Next",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": []
+    },
+    {
+      "Name": "Go Quarry Target",
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionGoWorkTarget",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Do Quarry",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionDoQuarry",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Back Home(Finish Quarry Work)",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionBackDormitory",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        },
+        {
+          "$type": "Pixpil.AI.Actions.SendWorkerEndDoQuarryMessage",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Back Home(Failed Construct)",
+      "IsActived": true,
+      "ExecutePolicy": 2,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionBackDormitory",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        },
+        {
+          "$type": "Pixpil.AI.Actions.SendWorkerEndConstructMessage",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Go SawMill Target",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionGoWorkTarget",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Do SawMill",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionDoSawMill",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    },
+    {
+      "Name": "Back Home(Finish SawMill Work)",
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.WorkerActionBackDormitory",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        },
+        {
+          "$type": "Pixpil.AI.Actions.SendWorkerEndDoSawMillMessage",
+          "ElapsedTime": 0,
+          "PreExecuteResult": 2,
+          "ExecuteResult": 2
+        }
+      ]
+    }
+  ],
+  "Name": "Worker",
+  "Guid": "d404c0e6-33ee-44d2-a936-eb49a5f11c2c"
+}

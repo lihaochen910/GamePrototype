@@ -1,0 +1,17 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Blackboard",
+  "Guid": "a266ce3c-1ca5-4743-a0d0-628f720e44c2",
+  "systems": [
+    {
+      "Item1": "Pixpil.Systems.PendingConstructBuildingBlackboardUpdateSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.WorldBuildingBlackboardUpdateSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

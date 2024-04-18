@@ -1,0 +1,69 @@
+{
+  "$type": "Murder.Assets.CharacterAsset",
+  "Owner": "00000000-0000-0000-0000-000000000000",
+  "Name": "Hello",
+  "Guid": "42453574-d09b-42d8-b3e9-6c60e9455f7b",
+  "situations": {
+    "0": {
+      "Id": 0,
+      "Name": "Hello",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": 1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "1b06bb50-1cc2-496b-96c4-11e118f64c93"
+              }
+            }
+          ],
+          "GoTo": -1,
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 2,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "5b3ba6d4-4ea0-41ed-ab33-deaf621bae55"
+              }
+            },
+            {
+              "Text": {
+                "Id": "a7c0aead-fd42-47ec-86a5-60fcf1943414"
+              }
+            },
+            {
+              "Text": {
+                "Id": "d6424765-a2f3-445a-86fb-e95e38513290"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  },
+  "components": {},
+  "portraits": {}
+}

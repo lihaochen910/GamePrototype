@@ -1,0 +1,81 @@
+{
+  "$type": "Pixpil.Assets.GoapScenarioAsset",
+  "ConditionDefines": [
+    "Construction Complete",
+    "Check Construct PreCondition",
+    "In Placing Mode",
+    "Can Light Up"
+  ],
+  "Actions": [
+    {
+      "Name": "Construct",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [
+        {
+          "$type": "Pixpil.AI.Actions.BuildingDoBuildingActionSelf",
+          "ElapsedTime": 0
+        }
+      ],
+      "Pre": {
+        "Check Construct PreCondition": true,
+        "In Placing Mode": false,
+        "Construction Complete": false
+      },
+      "Post": {
+        "Can Light Up": true,
+        "Construction Complete": true
+      }
+    },
+    {
+      "Name": "Light",
+      "Cost": 1,
+      "IsActived": true,
+      "ExecutePolicy": 0,
+      "Impl": [],
+      "Pre": {
+        "Can Light Up": true,
+        "Construction Complete": true
+      },
+      "Post": {}
+    }
+  ],
+  "Goals": [
+    {
+      "Name": "Dispel the fog",
+      "Conditions": {
+        "Can Light Up": true
+      },
+      "IsDefault": false
+    }
+  ],
+  "Conditions": {
+    "Can Light Up": {
+      "$type": "Pixpil.AI.GoapConditionCollection",
+      "CheckMode": 0,
+      "Conditions": [
+        {
+          "$type": "Pixpil.AI.CheckBuildingConstructComplete"
+        },
+        {
+          "$type": "Pixpil.AI.InverseCondition",
+          "Target": {
+            "$type": "Pixpil.AI.CheckBuildingInPlacingMode"
+          }
+        }
+      ]
+    },
+    "Check Construct PreCondition": {
+      "$type": "Pixpil.AI.CheckBuildingConstrctPreCondition"
+    },
+    "In Placing Mode": {
+      "$type": "Pixpil.AI.CheckBuildingInPlacingMode"
+    },
+    "Construction Complete": {
+      "$type": "Pixpil.AI.CheckBuildingConstructComplete"
+    }
+  },
+  "Name": "LightHouse",
+  "Guid": "9d8b117c-6357-4c95-a352-55e9cacdc50e"
+}

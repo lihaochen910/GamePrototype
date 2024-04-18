@@ -1,0 +1,294 @@
+{
+  "$type": "Murder.Assets.CharacterAsset",
+  "Owner": "00000000-0000-0000-0000-000000000000",
+  "Name": "My_hello",
+  "Guid": "9ed6a3f5-c45f-4834-be41-d7050c44d672",
+  "situations": {
+    "0": {
+      "Id": 0,
+      "Name": "Hello",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": 1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Speaker": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+              "Portrait": "Player",
+              "Text": {
+                "Id": "a3185282-cc72-4616-9899-e2b69b72a141"
+              }
+            },
+            {
+              "Text": {
+                "Id": "6e24fe81-a420-42b1-8b97-2f36c6b5e000"
+              }
+            },
+            {
+              "Text": {
+                "Id": "60cef4df-1541-49b7-85c6-a2fda2498f73"
+              }
+            }
+          ],
+          "GoTo": -1,
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 2,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Speaker": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+              "Portrait": "Player",
+              "Text": {
+                "Id": "3bb0e2d6-abae-4523-b183-3b8fd2d1ae8e"
+              }
+            },
+            {
+              "Speaker": "c22bd788-f565-433c-9510-2589febefe3d",
+              "Portrait": "Idle",
+              "Text": {
+                "Id": "cc750ae7-a368-4129-a69d-1315ef004f46"
+              }
+            },
+            {
+              "Speaker": "c22bd788-f565-433c-9510-2589febefe3d",
+              "Portrait": "Walk",
+              "Text": {
+                "Id": "574281d7-c12f-4e2f-b9bb-43762a22d2d9"
+              }
+            },
+            {
+              "Text": {
+                "Id": "34cc758e-6f75-4976-94c8-9e8fcb46b470"
+              }
+            },
+            {
+              "Speaker": "c22bd788-f565-433c-9510-2589febefe3d",
+              "Portrait": "Idle",
+              "Text": {
+                "Id": "94685835-a396-40ee-8e55-21122627799f"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1,
+            2
+          ]
+        }
+      }
+    },
+    "1": {
+      "Id": 1,
+      "Name": "branch_2",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Speaker": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+              "Portrait": "Player",
+              "Text": {
+                "Id": "3816ef23-e031-479e-b583-44090f03236e"
+              }
+            }
+          ],
+          "IsChoice": true
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 2,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "99e4139b-9706-44aa-a71c-e0cd7f104d71"
+              }
+            }
+          ],
+          "IsChoice": true
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 3,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "5ddd7fc4-ea1b-4ac1-9768-448989b08342"
+              }
+            }
+          ],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 4,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "b665c37b-4250-4582-bc64-0cb84d862c17"
+              }
+            }
+          ],
+          "IsChoice": true
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 5,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "a4e46ce5-48b9-45c0-9d9a-f4f55626662c"
+              }
+            }
+          ],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 6,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "bb06d965-b745-4c30-adbd-c986ae974c32"
+              }
+            }
+          ],
+          "IsChoice": true
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 7,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "0b5aa8e7-1bf5-4f53-9988-84a9a66118c5"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        },
+        "1": {
+          "Kind": 5,
+          "Dialogs": [
+            2,
+            4,
+            6
+          ]
+        },
+        "2": {
+          "Kind": 1,
+          "Dialogs": [
+            3
+          ]
+        },
+        "4": {
+          "Kind": 1,
+          "Dialogs": [
+            5
+          ]
+        },
+        "6": {
+          "Kind": 1,
+          "Dialogs": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "components": {},
+  "portraits": {
+    "key": {
+      "SituationId": 1,
+      "DialogId": 1,
+      "ItemId": 0
+    },
+    "value": {
+      "Item1": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+      "Item2": "Player"
+    },
+    "key": {
+      "SituationId": 0,
+      "DialogId": 1,
+      "ItemId": 0
+    },
+    "value": {
+      "Item1": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+      "Item2": "Player"
+    },
+    "key": {
+      "SituationId": 0,
+      "DialogId": 2,
+      "ItemId": 0
+    },
+    "value": {
+      "Item1": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+      "Item2": "Player"
+    },
+    "key": {
+      "SituationId": 0,
+      "DialogId": 2,
+      "ItemId": 1
+    },
+    "value": {
+      "Item1": "c22bd788-f565-433c-9510-2589febefe3d",
+      "Item2": "Idle"
+    },
+    "key": {
+      "SituationId": 0,
+      "DialogId": 2,
+      "ItemId": 2
+    },
+    "value": {
+      "Item1": "c22bd788-f565-433c-9510-2589febefe3d",
+      "Item2": "Walk"
+    },
+    "key": {
+      "SituationId": 0,
+      "DialogId": 2,
+      "ItemId": 4
+    },
+    "value": {
+      "Item1": "c22bd788-f565-433c-9510-2589febefe3d",
+      "Item2": "Idle"
+    }
+  }
+}

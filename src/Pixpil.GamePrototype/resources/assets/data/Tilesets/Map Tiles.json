@@ -1,0 +1,21 @@
+{
+  "$type": "Murder.Assets.Graphics.TilesetAsset",
+  "Image": "968bd307-1728-6645-edd2-9a71d6bb3958",
+  "Offset": {
+    "X": -12,
+    "Y": -12
+  },
+  "Size": {
+    "X": 24,
+    "Y": 24
+  },
+  "YSortOffset": 0,
+  "ConsiderOutsideOccupied": false,
+  "CollisionLayer": 64,
+  "Order": 1,
+  "TargetBatch": 0,
+  "AdditionalTiles": [],
+  "Sort": 0,
+  "Name": "Map Tiles",
+  "Guid": "26b86634-96ee-4594-a1e4-e3990ef026a2"
+}

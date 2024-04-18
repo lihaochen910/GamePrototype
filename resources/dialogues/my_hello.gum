@@ -1,0 +1,23 @@
+=Hello
+    @1  Player: 欢迎！ Murder3引擎.
+        Welcome to Murder.
+        Hello!
+        -> exit!
+
+    Player: 主人公入学超自然现象专门学校温泉科，因为意外发现小小人世界，展开一场异色的校园生活。
+    WorkerE: 女人，你是在玩火！玩火！
+    Daggers, are you sure you should be texting while driving? 
+    Don't worry Gram-Gram, clients respect aggressive and unrelenting communication. 
+    WorkerE: 不是吗?
+
+
+=branch_2
+	>> 这是标题.
+	> 选项1
+		选项1命中
+	> 选项2
+		选项2命中
+	> 选项3
+		选项3命中
+		
+	

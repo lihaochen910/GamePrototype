@@ -1,0 +1,21 @@
+{
+  "$type": "Murder.Assets.Graphics.TilesetAsset",
+  "Image": "4af1c7a7-ea5c-a340-920c-df6ba4696773",
+  "Offset": {
+    "X": 0,
+    "Y": 0
+  },
+  "Size": {
+    "X": 24,
+    "Y": 24
+  },
+  "YSortOffset": 0,
+  "ConsiderOutsideOccupied": false,
+  "CollisionLayer": 65,
+  "Order": 0,
+  "TargetBatch": 0,
+  "AdditionalTiles": [],
+  "Sort": 0,
+  "Name": "Simple Tiles",
+  "Guid": "17d77607-0205-49f1-b911-b9d89948d737"
+}

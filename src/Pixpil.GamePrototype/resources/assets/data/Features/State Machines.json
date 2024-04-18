@@ -1,0 +1,17 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "State Machines",
+  "Guid": "6fedfee8-dc14-4720-8548-6c7aba7c3d30",
+  "systems": [
+    {
+      "Item1": "Murder.Systems.StateMachineSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.StateMachineOnPauseSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

@@ -1,0 +1,9 @@
+{
+  "$type": "Murder.Assets.CharacterAsset",
+  "Owner": "00000000-0000-0000-0000-000000000000",
+  "Name": "MyCharacter",
+  "Guid": "de7cbc06-1066-4ebe-b298-e98823dae8d3",
+  "situations": {},
+  "components": {},
+  "portraits": {}
+}

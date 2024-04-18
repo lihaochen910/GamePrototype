@@ -1,0 +1,174 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": true,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "Worker",
+  "Guid": "19cdca59-1b18-4629-b8cd-dc3ca70875ba",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "e0f32b28-7480-4da6-9c8d-16e83c1645b0",
+    "name": "Worker",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.AgentComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.AgentComponent",
+        "Speed": 30,
+        "Acceleration": 0.5,
+        "Friction": 0.524
+      },
+      "Murder.Components.FacingComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.FacingComponent",
+        "Angle": 0,
+        "direction": 0
+      },
+      "Murder.Components.AgentImpulseComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.AgentImpulseComponent",
+        "Impulse": {
+          "X": 0,
+          "Y": 0
+        }
+      },
+      "Murder.Components.VelocityComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.VelocityComponent",
+        "Velocity": {
+          "X": 0,
+          "Y": 0
+        }
+      },
+      "Pixpil.Components.WorkerComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.WorkerComponent"
+      },
+      "Pixpil.Components.DayMessageListenerComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.DayMessageListenerComponent"
+      },
+      "Pixpil.Components.BatteryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BatteryComponent",
+        "MaxPower": 100,
+        "Power": 100
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": true,
+        "Cells": []
+      },
+      "Murder.Interactions.InteractorComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Interactions.InteractorComponent"
+      },
+      "Pixpil.AI.BlackboardComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.AI.BlackboardComponent",
+        "Variables": {
+          "Home": {
+            "Value": 0,
+            "VarType": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+          }
+        }
+      },
+      "Pixpil.AI.AiActionExecutorComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.AI.AiActionExecutorComponent",
+        "AiActionScenarioAsset": "d404c0e6-33ee-44d2-a936-eb49a5f11c2c"
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 8,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 23,
+            "Height": 33,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": -12,
+              "Y": 3
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Pixpil.Components.WorkerConstructionAbilityComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.WorkerConstructionAbilityComponent",
+        "SubmitTime": 0.5,
+        "SubmitCount": 20,
+        "BatteryPowerConsumption": {
+          "$type": "Pixpil.RPGStatSystem.RPGStatModTotalAdd",
+          "Value": 5,
+          "Stacks": true
+        }
+      },
+      "Pixpil.AI.UtilityAiAgentComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.AI.UtilityAiAgentComponent",
+        "UtilityAiAsset": "2e8648ae-be85-495c-bee7-c34e7a3eed7a",
+        "EvaluateMethod": 1,
+        "EvaluateInterval": 1,
+        "ReasonerChangedOnly": false
+      },
+      "Pixpil.Components.WorkerWorkAbilityComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.WorkerWorkAbilityComponent",
+        "ProcessSpeed": 3
+      },
+      "Pixpil.AI.AiActionExecutingHistoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.AI.AiActionExecutingHistoryComponent",
+        "Capacity": 5
+      }
+    },
+    "children": {
+      "76093e29-cb08-4975-b630-d6aa52d91f25": {
+        "IsDeactivated": false,
+        "ActivateWithParent": false,
+        "guid": "76093e29-cb08-4975-b630-d6aa52d91f25",
+        "name": "Animation",
+        "components": {
+          "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.PositionComponent",
+            "x": 0,
+            "y": 0
+          },
+          "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.SpriteComponent",
+            "AnimationGuid": "e5cd8c2f-1b4f-ba4a-9690-a4df7e7a3bdf",
+            "HighlightStyle": 0,
+            "NextAnimations": [
+              "idle"
+            ],
+            "YSortOffset": 0,
+            "TargetSpriteBatch": 0,
+            "Offset": {
+              "X": 0.512,
+              "Y": 0
+            },
+            "RotateWithFacing": false,
+            "FlipWithFacing": true,
+            "UseUnscaledTime": false
+          },
+          "Bang.StateMachines.StateMachineComponent\u00601[[Pixpil.StateMachines.WorkerAnimationStateMachine, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Bang, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Bang.StateMachines.StateMachineComponent\u003CPixpil.StateMachines.WorkerAnimationStateMachine\u003E",
+            "routine": {
+              "cachedPersistedState": "Idle"
+            }
+          }
+        }
+      }
+    }
+  }
+}

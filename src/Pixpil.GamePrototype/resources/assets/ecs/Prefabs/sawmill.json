@@ -1,0 +1,158 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": false,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "sawmill",
+  "Guid": "16366b8f-6a33-4536-9409-b05b450db8c5",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "abe1629f-bf4b-4c06-8b3b-1b7271529095",
+    "name": "sawmill",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "df51fafc-5015-f94d-af89-c957f1f8d3f2",
+        "HighlightStyle": 0,
+        "NextAnimations": [],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 8,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 51,
+            "Height": 44,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": 11,
+              "Y": 32
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Murder.Components.Graphics.ScaleComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.Graphics.ScaleComponent",
+        "Scale": {
+          "X": 0.2,
+          "Y": 0.2
+        }
+      },
+      "Pixpil.Components.BuildingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingComponent",
+        "Type": 4
+      },
+      "Pixpil.Components.BuildingConstructRequireResourcesComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingConstructRequireResourcesComponent",
+        "Requires": [
+          {
+            "ItemType": {
+              "Id": "stone"
+            },
+            "Count": 80
+          }
+        ]
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": [
+          {
+            "ItemType": {
+              "Id": "stone"
+            },
+            "Count": 0
+          }
+        ]
+      },
+      "Pixpil.Components.SawMillComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.SawMillComponent",
+        "ProcessTime": 30,
+        "ProcessCount": 20
+      },
+      "Pixpil.Components.BuildingWorkersInConstructingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingWorkersInConstructingComponent",
+        "Capcity": 3,
+        "Workers": []
+      },
+      "Pixpil.Components.BuildingWorkersInWorkingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingWorkersInWorkingComponent",
+        "Capcity": 2,
+        "Workers": []
+      }
+    },
+    "children": {
+      "dd050d9b-c1e6-4abc-b48a-621700a2227a": {
+        "IsDeactivated": false,
+        "ActivateWithParent": false,
+        "guid": "dd050d9b-c1e6-4abc-b48a-621700a2227a",
+        "name": "AgentSensor",
+        "components": {
+          "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.PositionComponent",
+            "x": -1,
+            "y": 0
+          },
+          "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.ColliderComponent",
+            "Layer": 2,
+            "Shapes": [
+              {
+                "$type": "Murder.Core.Geometry.BoxShape",
+                "Width": 71,
+                "Height": 65,
+                "Origin": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Offset": {
+                  "X": -1,
+                  "Y": 12
+                }
+              }
+            ],
+            "DebugColor": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

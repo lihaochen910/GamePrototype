@@ -1,0 +1,17 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Sounds",
+  "Guid": "5a549b16-149f-4082-bb6f-7020987d1cb8",
+  "systems": [
+    {
+      "Item1": "Murder.Systems.SoundsSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.MusicSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

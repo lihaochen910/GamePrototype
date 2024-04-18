@@ -1,0 +1,73 @@
+{
+  "$type": "Pixpil.Assets.UtilityAiAsset",
+  "RootReasoner": {
+    "$type": "Pixpil.AI.HighestScoreReasoner",
+    "Considerations": [
+      {
+        "$type": "Pixpil.AI.AllOrNothingConsideration",
+        "Threshold": 1,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckAgentInBuildingRange",
+              "BuildingType": 2
+            },
+            "ScoreWhenTrue": 0,
+            "ScoreWhenFalse": 1
+          }
+        ],
+        "Action": {
+          "Name": "Go Quarry Target",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.AllOrNothingConsideration",
+        "Threshold": 1,
+        "Appraisals": [
+          {
+            "$type": "Pixpil.AI.GoapConditionAppraisal",
+            "GoapCondition": {
+              "$type": "Pixpil.AI.CheckAgentInBuildingRange",
+              "BuildingType": 2
+            },
+            "ScoreWhenTrue": 1,
+            "ScoreWhenFalse": 0
+          }
+        ],
+        "Action": {
+          "Name": "Do Quarry",
+          "IsActived": true
+        },
+        "Name": ""
+      },
+      {
+        "$type": "Pixpil.AI.SumOfChildrenConsideration",
+        "Appraisals": [],
+        "Action": {
+          "Name": "Back Home(Finish Quarry Work)",
+          "IsActived": true
+        },
+        "Name": ""
+      }
+    ]
+  },
+  "Actions": [
+    {
+      "Name": "Go Quarry Target",
+      "IsActived": true
+    },
+    {
+      "Name": "Do Quarry",
+      "IsActived": true
+    },
+    {
+      "Name": "Back Home(Finish Quarry Work)",
+      "IsActived": true
+    }
+  ],
+  "Name": "QuarryWorker",
+  "Guid": "e0c774e5-531e-4cee-8478-9493d578153e"
+}

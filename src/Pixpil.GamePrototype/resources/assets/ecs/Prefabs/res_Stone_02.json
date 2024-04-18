@@ -1,0 +1,93 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": true,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "res_Stone_02",
+  "Guid": "5b9aafdf-522c-404a-b13c-c1f0f136069d",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "ae891696-337c-4d98-8ddf-037f95314163",
+    "name": "",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "cd000fc0-f790-d26c-dfa2-624dae579d73",
+        "HighlightStyle": 0,
+        "NextAnimations": [],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0.128,
+          "Y": 0.077
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 2,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 34,
+            "Height": 27,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": 0,
+              "Y": 0
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Pixpil.Components.InteractOnButtonPressComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InteractOnButtonPressComponent",
+        "Priority": 0,
+        "HighlightOnRange": true
+      },
+      "Bang.Interactions.InteractiveComponent\u00601[[Pixpil.Systems.Interactions.CollectWorldResourceOnInteract, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Bang, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Bang.Interactions.InteractiveComponent\u003CPixpil.Systems.Interactions.CollectWorldResourceOnInteract\u003E",
+        "interaction": {}
+      },
+      "Pixpil.Components.WorldResourceComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.WorldResourceComponent"
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": [
+          {
+            "ItemType": {
+              "Id": "stone"
+            },
+            "Count": 2300
+          }
+        ]
+      }
+    }
+  }
+}

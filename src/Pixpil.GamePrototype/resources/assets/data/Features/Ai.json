@@ -1,0 +1,29 @@
+{
+  "$type": "Murder.Assets.FeatureAsset",
+  "IsDiagnostics": false,
+  "Name": "Ai",
+  "Guid": "2021dd9e-7309-4d75-8263-2b35b85ef7a0",
+  "systems": [
+    {
+      "Item1": "Pixpil.AI.GoapComputeSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.AI.GoapPlanExecutingSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.AI.UtilityAiComputeSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.AI.UtilityAiActionRouteSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.AI.AiActionExecutingSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": []
+}

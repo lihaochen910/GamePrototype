@@ -1,0 +1,115 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": true,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "chest",
+  "Guid": "8964216a-a773-446f-b441-b12595a660bc",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "b6e69f68-6330-4520-b59b-ba4ff65f9095",
+    "name": "chest",
+    "components": {
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "417dc613-fa6c-8180-cf8b-174e42ab2ae7",
+        "HighlightStyle": 0,
+        "NextAnimations": [
+          "idle_closed"
+        ],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 2,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 25,
+            "Height": 23,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": -1,
+              "Y": 0
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Murder.Components.Graphics.ScaleComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.Graphics.ScaleComponent",
+        "Scale": {
+          "X": 0.25,
+          "Y": 0.25
+        }
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": [
+          {
+            "ItemType": {
+              "Id": "food"
+            },
+            "Count": 100
+          },
+          {
+            "ItemType": {
+              "Id": "stone"
+            },
+            "Count": 100
+          },
+          {
+            "ItemType": {
+              "Id": "wood"
+            },
+            "Count": 200
+          }
+        ]
+      },
+      "Murder.Components.InteractOnCollisionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.InteractOnCollisionComponent",
+        "OnlyOnce": false,
+        "SendMessageOnExit": false,
+        "SendMessageOnStay": false,
+        "CustomEnterMessages": [],
+        "CustomExitMessages": [],
+        "PlayerOnly": false
+      },
+      "Bang.Interactions.InteractiveComponent\u00601[[Pixpil.Systems.Interactions.GetRandomItemsFromInventoryOnInteract, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Bang, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Bang.Interactions.InteractiveComponent\u003CPixpil.Systems.Interactions.GetRandomItemsFromInventoryOnInteract\u003E",
+        "interaction": {}
+      }
+    }
+  }
+}

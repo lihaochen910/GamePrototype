@@ -1,0 +1,158 @@
+{
+  "$type": "Murder.Assets.PrefabAsset",
+  "ShowOnPrefabSelector": false,
+  "Dimensions": {
+    "Origin": {
+      "X": 0,
+      "Y": 0
+    },
+    "Size": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Name": "quarry",
+  "Guid": "ce215055-0968-43d7-9967-d34b0959f585",
+  "entity": {
+    "IsDeactivated": false,
+    "ActivateWithParent": false,
+    "guid": "b815f788-e294-473d-9f2c-e6ef628c74c5",
+    "name": "quarry",
+    "components": {
+      "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.SpriteComponent",
+        "AnimationGuid": "8e2bb5c6-8007-acd6-d4f1-e92154ba4c4d",
+        "HighlightStyle": 0,
+        "NextAnimations": [],
+        "YSortOffset": 0,
+        "TargetSpriteBatch": 0,
+        "Offset": {
+          "X": 0,
+          "Y": 0
+        },
+        "RotateWithFacing": false,
+        "FlipWithFacing": false,
+        "UseUnscaledTime": false
+      },
+      "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.PositionComponent",
+        "x": 0,
+        "y": 0
+      },
+      "Murder.Components.Graphics.ScaleComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.Graphics.ScaleComponent",
+        "Scale": {
+          "X": 0.3,
+          "Y": 0.3
+        }
+      },
+      "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Murder.Components.ColliderComponent",
+        "Layer": 8,
+        "Shapes": [
+          {
+            "$type": "Murder.Core.Geometry.BoxShape",
+            "Width": 64,
+            "Height": 32,
+            "Origin": {
+              "X": 0,
+              "Y": 0
+            },
+            "Offset": {
+              "X": 6,
+              "Y": 31
+            }
+          }
+        ],
+        "DebugColor": {
+          "R": 0.99609375,
+          "G": 0.47265625,
+          "B": 0.7734375,
+          "A": 1
+        }
+      },
+      "Pixpil.Components.BuildingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingComponent",
+        "Type": 2
+      },
+      "Pixpil.Components.QuarryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.QuarryComponent",
+        "ProcessTime": 30,
+        "ProcessCount": 20
+      },
+      "Pixpil.Components.BuildingConstructRequireResourcesComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingConstructRequireResourcesComponent",
+        "Requires": [
+          {
+            "ItemType": {
+              "Id": "wood"
+            },
+            "Count": 100
+          }
+        ]
+      },
+      "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.InventoryComponent",
+        "CanExpand": false,
+        "Cells": [
+          {
+            "ItemType": {
+              "Id": "wood"
+            },
+            "Count": 0
+          }
+        ]
+      },
+      "Pixpil.Components.BuildingWorkersInConstructingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingWorkersInConstructingComponent",
+        "Capcity": 2,
+        "Workers": []
+      },
+      "Pixpil.Components.BuildingWorkersInWorkingComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+        "$type": "Pixpil.Components.BuildingWorkersInWorkingComponent",
+        "Capcity": 2,
+        "Workers": []
+      }
+    },
+    "children": {
+      "c3c23d43-41b4-44f9-8bff-225f80ee412f": {
+        "IsDeactivated": false,
+        "ActivateWithParent": false,
+        "guid": "c3c23d43-41b4-44f9-8bff-225f80ee412f",
+        "name": "AgentSensor",
+        "components": {
+          "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.PositionComponent",
+            "x": 0,
+            "y": 0
+          },
+          "Murder.Components.ColliderComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+            "$type": "Murder.Components.ColliderComponent",
+            "Layer": 2,
+            "Shapes": [
+              {
+                "$type": "Murder.Core.Geometry.BoxShape",
+                "Width": 71,
+                "Height": 65,
+                "Origin": {
+                  "X": 0,
+                  "Y": 0
+                },
+                "Offset": {
+                  "X": 0,
+                  "Y": -1
+                }
+              }
+            ],
+            "DebugColor": {
+              "R": 1,
+              "G": 1,
+              "B": 1,
+              "A": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

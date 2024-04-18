@@ -1,0 +1,324 @@
+{
+  "$type": "Murder.Assets.CharacterAsset",
+  "Owner": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
+  "Portrait": "Portrait-1",
+  "Name": "Intro",
+  "Guid": "ab26b7b4-0d9f-46c6-828d-4cd7b9db24cc",
+  "situations": {
+    "0": {
+      "Id": 0,
+      "Name": "Intro",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "4fef6414-f14a-4f3f-b806-a7f6a1308690"
+              }
+            },
+            {
+              "Text": {
+                "Id": "d26bd4c1-65ef-4cf5-907a-b527226109ad"
+              }
+            },
+            {
+              "Text": {
+                "Id": "a5b74b50-1f04-4a97-9996-b7ada7b620ba"
+              }
+            },
+            {
+              "Text": {
+                "Id": "a63e3438-cd94-49ad-8194-286246666861"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    },
+    "1": {
+      "Id": 1,
+      "Name": "Day1_Setup",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "21ccfef8-ce0d-4d81-9b89-6911e9507f9a"
+              }
+            },
+            {
+              "Text": {
+                "Id": "5a9a69bb-324a-439d-8482-70c6a55a5978"
+              }
+            },
+            {
+              "Text": {
+                "Id": "518aaff7-c969-45dc-8841-ad072e40880d"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    },
+    "2": {
+      "Id": 2,
+      "Name": "Day2_Setup",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "15bc1447-54be-44c0-bd22-b57d48b76f42"
+              }
+            },
+            {
+              "Text": {
+                "Id": "b9766570-df69-4b9c-90bc-31cacf2ed2a3"
+              }
+            },
+            {
+              "Text": {
+                "Id": "ffecf67f-af75-490a-9d50-c07192658aac"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    },
+    "3": {
+      "Id": 3,
+      "Name": "Day3_Setup",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "872c226e-1b90-495e-986f-0cd898aef9cd"
+              }
+            },
+            {
+              "Text": {
+                "Id": "6d9c4004-fa2b-4590-9b28-0d053ce2b41e"
+              }
+            },
+            {
+              "Text": {
+                "Id": "314ccfe0-07e8-499e-94a2-96ba3fa6c6ee"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    },
+    "4": {
+      "Id": 4,
+      "Name": "Day4_Setup",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "e8f40b9b-b9e8-441b-abbb-85c01634ff0e"
+              }
+            },
+            {
+              "Text": {
+                "Id": "7f355961-258b-4f78-8b7c-f092edd67bfb"
+              }
+            },
+            {
+              "Text": {
+                "Id": "4f658286-21df-4bad-9395-20127fb6196f"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    },
+    "5": {
+      "Id": 5,
+      "Name": "Day5_Setup",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "8e71bf98-4c2a-40f2-ab7a-03219d9ae62c"
+              }
+            },
+            {
+              "Text": {
+                "Id": "8f31e1f1-a54d-4cc2-81ae-deecfad220f1"
+              }
+            },
+            {
+              "Text": {
+                "Id": "fa7d8f0c-e370-4527-946c-39e6fe03108d"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    },
+    "6": {
+      "Id": 6,
+      "Name": "Day6_Setup",
+      "Dialogs": [
+        {
+          "PlayUntil": -1,
+          "Id": 0,
+          "Requirements": [],
+          "Lines": [],
+          "IsChoice": false
+        },
+        {
+          "PlayUntil": -1,
+          "Id": 1,
+          "Requirements": [],
+          "Lines": [
+            {
+              "Text": {
+                "Id": "a2dac424-04d1-4311-a019-f1c338515184"
+              }
+            },
+            {
+              "Text": {
+                "Id": "9939e90e-46f6-4909-a36d-68e365e26875"
+              }
+            },
+            {
+              "Text": {
+                "Id": "39374845-29c9-4438-ada1-ab7108fda5d5"
+              }
+            }
+          ],
+          "IsChoice": false
+        }
+      ],
+      "Edges": {
+        "0": {
+          "Kind": 1,
+          "Dialogs": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "components": {},
+  "portraits": {}
+}
