@@ -1,0 +1,29 @@
+# Auto detect text files and perform LF normalization
+*          text=auto
+
+*.cs       text diff=csharp
+*.csx      text diff=csharp
+*.sln      text eol=crlf
+*.csproj   text eol=crlf
+
+# Unity JSON files
+*.json                  json
+
+# Localize Asset
+*.csv					text
+
+# GUM Asset
+*.gum					text
+
+# Images
+*.png                   lfs
+*.psd                   lfs
+*.ase                   lfs
+*.aseprite              lfs
+
+# Fonts
+*.ttf                   lfs
+*.fnt                   text
+
+# Compiled Dynamic Library
+*.dll                   lfs
