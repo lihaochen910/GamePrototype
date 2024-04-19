@@ -7,7 +7,8 @@
 *.csproj   text eol=crlf
 
 # JSON files
-*.json                  lfs
+*.json                  text
+game_condifg            text
 
 # Localize Asset
 *.csv					text

@@ -400,5 +400,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-# src/Pixpil.GamePrototype/packed
+src/Pixpil.GamePrototype/packed
+!src/Pixpil.GamePrototype/packed/atlas
 src/Pixpil.GamePrototype/resources/assets/data/Generated
