@@ -16,7 +16,7 @@
   "GameWidth": 640,
   "GameHeight": 480,
   "GameScale": 2,
-  "ResizeMode": 1,
+  "ResizeMode": 2,
   "SnapToInteger": 0.25,
   "PositiveApectRatioAllowance": 0.5,
   "NegativeApectRatioAllowance": 0.1,
@@ -191,7 +191,9 @@
     "A": 1
   },
   "MissingImage": "3c4ec0fa-0d0c-4f0f-9cb7-079bb9734a26",
-  "LocalizationResources": {},
+  "LocalizationResources": {
+    "English": "d18740ff-9090-4b5f-8f7e-7d98eaffe1cf"
+  },
   "Name": "Game Profile",
   "Guid": "96b8cf09-be58-40fe-852c-c84de659cfa8",
   "scalingFilter": false,

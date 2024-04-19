@@ -13,6 +13,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Rider
+.idea/
+
 # Mono auto generated files
 mono_crash.*
 
@@ -397,5 +400,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-src/Pixpil.GamePrototype/packed
+# src/Pixpil.GamePrototype/packed
 src/Pixpil.GamePrototype/resources/assets/data/Generated
