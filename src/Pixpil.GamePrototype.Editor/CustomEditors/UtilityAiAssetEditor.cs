@@ -141,27 +141,29 @@ internal class UtilityAiAssetEditor : CustomEditor {
 					
 					ImGui.TableNextColumn();
 					{
-						ImGui.Separator();
-						5.Times( _ => ImGui.Spacing() );
-						ImGui.TextColored( Game.Profile.Theme.HighAccent, Prettify.FormatName( _utilityAiAsset.RootReasoner.GetType().Name ) );
-						2.Times( _ => ImGui.Spacing() );
-						ImGui.Indent( 12 );
-						ImGui.Separator();
-						ImGui.Spacing();
-						ImGui.TextColored( Game.Profile.Theme.Faded, $"{'\uf0eb'} {_utilityAiAsset.RootReasoner.Description}" );
-						ImGui.Spacing();
-						ImGui.Separator();
-						ImGui.Unindent( 12 );
-						5.Times( _ => ImGui.Spacing() );
-					
-						ImGui.SeparatorText( "Default" );
-						UtilityAiAgentComponentEditor.DrawDebugConsiderationNonRuntime( _utilityAiAsset.RootReasoner.DefaultConsideration );
-						5.Times( _ => ImGui.Spacing() );
-					
-						ImGui.SeparatorText( "Considerations" );
-						foreach ( var consideration in _utilityAiAsset.RootReasoner.Considerations ) {
-							UtilityAiAgentComponentEditor.DrawDebugConsiderationNonRuntime( consideration );
-							8.Times( _ => ImGui.Spacing() );
+						if ( _utilityAiAsset.RootReasoner is not null ) {
+							ImGui.Separator();
+							5.Times( _ => ImGui.Spacing() );
+							ImGui.TextColored( Game.Profile.Theme.HighAccent, Prettify.FormatName( _utilityAiAsset.RootReasoner.GetType().Name ) );
+							2.Times( _ => ImGui.Spacing() );
+							ImGui.Indent( 12 );
+							ImGui.Separator();
+							ImGui.Spacing();
+							ImGui.TextColored( Game.Profile.Theme.Faded, $"{'\uf0eb'} {_utilityAiAsset.RootReasoner.Description}" );
+							ImGui.Spacing();
+							ImGui.Separator();
+							ImGui.Unindent( 12 );
+							5.Times( _ => ImGui.Spacing() );
+						
+							ImGui.SeparatorText( "Default" );
+							UtilityAiAgentComponentEditor.DrawDebugConsiderationNonRuntime( _utilityAiAsset.RootReasoner.DefaultConsideration );
+							5.Times( _ => ImGui.Spacing() );
+						
+							ImGui.SeparatorText( "Considerations" );
+							foreach ( var consideration in _utilityAiAsset.RootReasoner.Considerations ) {
+								UtilityAiAgentComponentEditor.DrawDebugConsiderationNonRuntime( consideration );
+								8.Times( _ => ImGui.Spacing() );
+							}
 						}
 					}
 					
