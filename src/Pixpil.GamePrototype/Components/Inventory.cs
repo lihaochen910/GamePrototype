@@ -155,7 +155,7 @@ namespace Pixpil.Components {
 	public readonly struct InventoryComponent : IComponent {
 
 		public readonly bool CanExpand;
-		public readonly ImmutableArray< InventoryEntry > Cells = ImmutableArray< InventoryEntry >.Empty;
+		public readonly ImmutableArray< InventoryEntry > Cells = [];
 		
 		public int Capacity => Cells.Length;
 		

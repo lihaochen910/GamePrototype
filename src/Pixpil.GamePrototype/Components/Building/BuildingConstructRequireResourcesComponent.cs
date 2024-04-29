@@ -9,7 +9,7 @@ namespace Pixpil.Components;
 
 public readonly struct BuildingConstructRequireResourcesComponent : IComponent {
 	
-	public readonly ImmutableArray< ReadOnlyInventoryEntry > Requires = ImmutableArray< ReadOnlyInventoryEntry >.Empty;
+	public readonly ImmutableArray< ReadOnlyInventoryEntry > Requires = [];
 
 	public BuildingConstructRequireResourcesComponent( ImmutableArray< ReadOnlyInventoryEntry > requires ) {
 		Requires = requires;

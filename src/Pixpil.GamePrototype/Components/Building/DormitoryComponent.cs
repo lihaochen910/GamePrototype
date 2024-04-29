@@ -19,12 +19,12 @@ public readonly struct DormitoryPersonnelSituationComponent : IComponent {
 	/// <summary>
 	/// 指示有多少空闲的人
 	/// </summary>
-	public readonly ImmutableArray< int > IdleStaff = ImmutableArray< int >.Empty;
+	public readonly ImmutableArray< int > IdleStaff = [];
 	
 	/// <summary>
 	/// 有多少忙碌的人
 	/// </summary>
-	public readonly ImmutableArray< int > BusyStaff = ImmutableArray< int >.Empty;
+	public readonly ImmutableArray< int > BusyStaff = [];
 	
 	
 	public int Totals {
