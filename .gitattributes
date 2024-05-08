@@ -22,6 +22,9 @@ game_condifg            text
 *.ase                   lfs
 *.aseprite              lfs
 
+# Murder Engine imported image
+*.qoi.gz                lfs
+
 # Fonts
 *.ttf                   lfs
 *.fnt                   text
