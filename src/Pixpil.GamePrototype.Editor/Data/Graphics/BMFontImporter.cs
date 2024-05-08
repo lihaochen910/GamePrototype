@@ -34,7 +34,7 @@ internal class BMFontImporter {
 			return false;
 		}
 
-		FileHelper.CreateDirectoryPathIfNotExists( sourcePackedPath );
+		FileManager.CreateDirectoryPathIfNotExists( sourcePackedPath );
 		string pngRawPath = Path.Combine( Path.GetDirectoryName( fontPath ), pngFile );
 		if ( !File.Exists( pngRawPath ) ) {
 			GameLogger.Error( "bmfont page filename must be same as .fnt file." );
@@ -139,11 +139,11 @@ internal class BMFontImporter {
 			FontAsset fontAsset = new ( fontIndex, characters, kernings.ToImmutableArray(), lineHeight, fontPath, -baseHeight, fontOffset );
 
             // Save characters to JSON
-			FileHelper.SaveSerialized( fontAsset, jsonSourcePackedPath, false );
+			Game.Data.FileManager.SaveSerialized( fontAsset, jsonSourcePackedPath );
 		}
 
         // Copy files to binaries path.
-		FileHelper.CreateDirectoryPathIfNotExists( binResourcesPath );
+		FileManager.CreateDirectoryPathIfNotExists( binResourcesPath );
 		File.Copy( pngSourcePackedPath, Path.Join( binResourcesPath, pngFile ), true );
 		File.Copy( jsonSourcePackedPath, Path.Join( binResourcesPath, jsonFile ), true );
 

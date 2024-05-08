@@ -2,7 +2,7 @@
   "$type": "Murder.Assets.CharacterAsset",
   "Owner": "00000000-0000-0000-0000-000000000000",
   "Name": "My_hello",
-  "Guid": "9ed6a3f5-c45f-4834-be41-d7050c44d672",
+  "Guid": "d0abc85f-960b-4aac-a6a9-914e12ff689b",
   "situations": {
     "0": {
       "Id": 0,
@@ -22,19 +22,18 @@
           "Lines": [
             {
               "Speaker": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
-              "Portrait": "Player",
               "Text": {
-                "Id": "a14e2e39-1c8c-4a90-95af-2dcc9ff7f6fa"
+                "Id": "c1eac32e-0bdb-40d6-b5a8-afb6404ca123"
               }
             },
             {
               "Text": {
-                "Id": "d0de8c09-b6dc-4c6d-8038-687316360d7b"
+                "Id": "311d8fbf-d4c0-4a97-8d24-76f96371f622"
               }
             },
             {
               "Text": {
-                "Id": "af27a049-b2fa-4b70-8896-f20c288c6dce"
+                "Id": "865d9af6-5adf-44d3-9bfd-778299bcc66f"
               }
             }
           ],
@@ -48,35 +47,30 @@
           "Lines": [
             {
               "Speaker": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
-              "Portrait": "Player",
               "Text": {
-                "Id": "4338d21c-bd68-4766-aa33-296350835945"
+                "Id": "362700c3-872c-4086-81df-7afda58c5be6"
               }
             },
             {
               "Speaker": "c22bd788-f565-433c-9510-2589febefe3d",
-              "Portrait": "Idle",
               "Text": {
-                "Id": "d5994be1-a561-4f12-8ee2-c25daac5ace2"
+                "Id": "6f386731-807a-47f7-af90-608772318d99"
+              }
+            },
+            {
+              "Text": {
+                "Id": "bf4e71c4-6f7c-40a0-afe0-05a7f9b3cd6b"
+              }
+            },
+            {
+              "Text": {
+                "Id": "8a1ce9d8-ca42-4151-a7af-c235446be554"
               }
             },
             {
               "Speaker": "c22bd788-f565-433c-9510-2589febefe3d",
-              "Portrait": "Walk",
               "Text": {
-                "Id": "16ef8236-2e90-4d27-b24a-5b71777957ea"
-              }
-            },
-            {
-              "Text": {
-                "Id": "e5a418c0-238e-40cc-8422-b12ff9b59309"
-              }
-            },
-            {
-              "Speaker": "c22bd788-f565-433c-9510-2589febefe3d",
-              "Portrait": "Idle",
-              "Text": {
-                "Id": "b2207ee0-f3dc-4b2d-a969-5931b482ba12"
+                "Id": "83148ae1-ea9b-4770-a142-8d5a60ebfffc"
               }
             }
           ],
@@ -110,10 +104,8 @@
           "Requirements": [],
           "Lines": [
             {
-              "Speaker": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
-              "Portrait": "Player",
               "Text": {
-                "Id": "b9ac7ab2-ac00-42b3-939f-496558d96df1"
+                "Id": "c39e14c7-9689-4b2d-9252-eb7f7a9b5e38"
               }
             }
           ],
@@ -126,7 +118,7 @@
           "Lines": [
             {
               "Text": {
-                "Id": "80f57cf3-c7cd-4fb6-828a-3a2e76f7a5da"
+                "Id": "f1139b9c-8c9e-427b-8654-f596e246bcd4"
               }
             }
           ],
@@ -139,7 +131,7 @@
           "Lines": [
             {
               "Text": {
-                "Id": "c2ed9b96-416f-4824-9bd6-c4c7277a04d0"
+                "Id": "21c74d2d-9dfe-46e0-859c-fdf225b6e8aa"
               }
             }
           ],
@@ -152,7 +144,7 @@
           "Lines": [
             {
               "Text": {
-                "Id": "89133948-c86f-4ab2-bff0-d9ba998da531"
+                "Id": "771bd95d-c08b-495f-8b5c-5aed09bf9333"
               }
             }
           ],
@@ -165,7 +157,7 @@
           "Lines": [
             {
               "Text": {
-                "Id": "29c81ef5-507a-4170-9650-17f1ba655e5b"
+                "Id": "5a625c53-9857-4481-ab8d-6690b481df4f"
               }
             }
           ],
@@ -178,7 +170,7 @@
           "Lines": [
             {
               "Text": {
-                "Id": "aab8a679-d736-4853-a4df-5ad30e3fea6f"
+                "Id": "3c0fdb29-1d20-405a-a8c5-3a893dbce4b2"
               }
             }
           ],
@@ -191,7 +183,7 @@
           "Lines": [
             {
               "Text": {
-                "Id": "766823da-8802-4e59-81a0-05773384cd1c"
+                "Id": "48f899e0-6a6e-4b5a-8c33-ad6f23634b86"
               }
             }
           ],
@@ -235,60 +227,5 @@
     }
   },
   "components": {},
-  "portraits": {
-    "key": {
-      "SituationId": 1,
-      "DialogId": 1,
-      "ItemId": 0
-    },
-    "value": {
-      "Item1": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
-      "Item2": "Player"
-    },
-    "key": {
-      "SituationId": 0,
-      "DialogId": 1,
-      "ItemId": 0
-    },
-    "value": {
-      "Item1": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
-      "Item2": "Player"
-    },
-    "key": {
-      "SituationId": 0,
-      "DialogId": 2,
-      "ItemId": 0
-    },
-    "value": {
-      "Item1": "eaee028a-f126-4bb8-8c6f-2a61cdaff0dd",
-      "Item2": "Player"
-    },
-    "key": {
-      "SituationId": 0,
-      "DialogId": 2,
-      "ItemId": 1
-    },
-    "value": {
-      "Item1": "c22bd788-f565-433c-9510-2589febefe3d",
-      "Item2": "Idle"
-    },
-    "key": {
-      "SituationId": 0,
-      "DialogId": 2,
-      "ItemId": 2
-    },
-    "value": {
-      "Item1": "c22bd788-f565-433c-9510-2589febefe3d",
-      "Item2": "Walk"
-    },
-    "key": {
-      "SituationId": 0,
-      "DialogId": 2,
-      "ItemId": 4
-    },
-    "value": {
-      "Item1": "c22bd788-f565-433c-9510-2589febefe3d",
-      "Item2": "Idle"
-    }
-  }
+  "portraits": {}
 }

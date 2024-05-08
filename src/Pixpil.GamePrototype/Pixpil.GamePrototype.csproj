@@ -1,13 +1,13 @@
 ﻿<Project>
   <PropertyGroup>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build\obj\$(MSBuildProjectName)\$(Configuration)</BaseIntermediateOutputPath>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build/obj/$(MSBuildProjectName)/$(Configuration)</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
   </PropertyGroup>
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
   
   <PropertyGroup>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build/obj/$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
 	<RootNamespace>Pixpil</RootNamespace>
@@ -32,10 +32,10 @@
     <DefineConstants Condition=" '$(OS)' == 'Windows_NT' ">TRACE;WINDOWS</DefineConstants>
     <DefineConstants Condition=" '$(OS)' == 'UNIX' ">TRACE;MACOS</DefineConstants>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <IntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build\obj\$(MSBuildProjectName)\$(Configuration)</IntermediateOutputPath>
-    <IntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build/obj/$(MSBuildProjectName)</IntermediateOutputPath>
-    <OutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build</OutputPath>
-    <OutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build</OutputPath>
+    <IntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</IntermediateOutputPath>
+    <IntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</IntermediateOutputPath>
+    <OutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)</OutputPath>
+    <OutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   
@@ -82,13 +82,13 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <Folder Include="resources\assets\" />
     <Folder Include="resources\assets\data\GoapScenarios\" />
     <Folder Include="ThirdParty\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Murder.FNA" Version="24.4.3" />
   </ItemGroup>
   
   <ItemGroup>

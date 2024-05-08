@@ -1,15 +1,15 @@
 ﻿<Project>
   <PropertyGroup>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build\obj\$(MSBuildProjectName)\$(Configuration)</BaseIntermediateOutputPath>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build/obj/$(MSBuildProjectName)/$(Configuration)</BaseIntermediateOutputPath>
-    <Configurations>Debug;Release;DebugDBD</Configurations>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
+    <Configurations>Debug;Release</Configurations>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
 
   <PropertyGroup>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build/obj/$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
 
@@ -25,10 +25,10 @@
     <DefineConstants Condition=" '$(OS)' == 'Windows_NT' ">TRACE;WINDOWS</DefineConstants>
     <DefineConstants Condition=" '$(OS)' == 'UNIX' ">TRACE;MACOS</DefineConstants>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <IntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build\obj\$(MSBuildProjectName)\$(Configuration)</IntermediateOutputPath>
-    <IntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build/obj/$(MSBuildProjectName)</IntermediateOutputPath>
-    <OutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\build</OutputPath>
-    <OutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/build</OutputPath>
+    <IntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</IntermediateOutputPath>
+    <IntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</IntermediateOutputPath>
+    <OutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)</OutputPath>
+    <OutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)</OutputPath>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   

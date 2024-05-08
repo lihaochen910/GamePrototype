@@ -97,6 +97,81 @@
       "String": "\u9009\u98793\u547D\u4E2D",
       "IsGenerated": true,
       "Guid": "0b5aa8e7-1bf5-4f53-9988-84a9a66118c5"
+    },
+    {
+      "String": "\u6B22\u8FCE\uFF01 Murder4\u5F15\u64CE.",
+      "IsGenerated": true,
+      "Guid": "c1eac32e-0bdb-40d6-b5a8-afb6404ca123"
+    },
+    {
+      "String": "Welcome to Murder.",
+      "IsGenerated": true,
+      "Guid": "311d8fbf-d4c0-4a97-8d24-76f96371f622"
+    },
+    {
+      "String": "Hello!",
+      "IsGenerated": true,
+      "Guid": "865d9af6-5adf-44d3-9bfd-778299bcc66f"
+    },
+    {
+      "String": "\u4E3B\u4EBA\u516C\u5165\u5B66\u8D85\u81EA\u7136\u73B0\u8C61\u4E13\u95E8\u5B66\u6821\u6E29\u6CC9\u79D1\uFF0C\u56E0\u4E3A\u610F\u5916\u53D1\u73B0\u5C0F\u5C0F\u4EBA\u4E16\u754C\uFF0C\u5C55\u5F00\u4E00\u573A\u5F02\u8272\u7684\u6821\u56ED\u751F\u6D3B\u3002",
+      "IsGenerated": true,
+      "Guid": "362700c3-872c-4086-81df-7afda58c5be6"
+    },
+    {
+      "String": "\u5973\u4EBA\uFF0C\u4F60\u662F\u5728\u73A9\u706B\uFF01\u73A9\u706B\uFF01",
+      "IsGenerated": true,
+      "Guid": "6f386731-807a-47f7-af90-608772318d99"
+    },
+    {
+      "String": "Daggers, are you sure you should be texting while driving?",
+      "IsGenerated": true,
+      "Guid": "bf4e71c4-6f7c-40a0-afe0-05a7f9b3cd6b"
+    },
+    {
+      "String": "Don\u0027t worry Gram-Gram, clients respect aggressive and unrelenting communication.",
+      "IsGenerated": true,
+      "Guid": "8a1ce9d8-ca42-4151-a7af-c235446be554"
+    },
+    {
+      "String": "\u4E0D\u662F\u5417?",
+      "IsGenerated": true,
+      "Guid": "83148ae1-ea9b-4770-a142-8d5a60ebfffc"
+    },
+    {
+      "String": "\u8FD9\u662F\u6807\u9898.",
+      "IsGenerated": true,
+      "Guid": "c39e14c7-9689-4b2d-9252-eb7f7a9b5e38"
+    },
+    {
+      "String": "\u9009\u98791",
+      "IsGenerated": true,
+      "Guid": "f1139b9c-8c9e-427b-8654-f596e246bcd4"
+    },
+    {
+      "String": "\u9009\u98791\u547D\u4E2D",
+      "IsGenerated": true,
+      "Guid": "21c74d2d-9dfe-46e0-859c-fdf225b6e8aa"
+    },
+    {
+      "String": "\u9009\u98792",
+      "IsGenerated": true,
+      "Guid": "771bd95d-c08b-495f-8b5c-5aed09bf9333"
+    },
+    {
+      "String": "\u9009\u98792\u547D\u4E2D",
+      "IsGenerated": true,
+      "Guid": "5a625c53-9857-4481-ab8d-6690b481df4f"
+    },
+    {
+      "String": "\u9009\u98793",
+      "IsGenerated": true,
+      "Guid": "3c0fdb29-1d20-405a-a8c5-3a893dbce4b2"
+    },
+    {
+      "String": "\u9009\u98793\u547D\u4E2D",
+      "IsGenerated": true,
+      "Guid": "48f899e0-6a6e-4b5a-8c33-ad6f23634b86"
     }
   ],
   "dialogueResources": [
@@ -127,6 +202,26 @@
         "a4e46ce5-48b9-45c0-9d9a-f4f55626662c",
         "bb06d965-b745-4c30-adbd-c986ae974c32",
         "0b5aa8e7-1bf5-4f53-9988-84a9a66118c5"
+      ]
+    },
+    {
+      "DialogueResourceGuid": "d0abc85f-960b-4aac-a6a9-914e12ff689b",
+      "Resources": [
+        "c1eac32e-0bdb-40d6-b5a8-afb6404ca123",
+        "311d8fbf-d4c0-4a97-8d24-76f96371f622",
+        "865d9af6-5adf-44d3-9bfd-778299bcc66f",
+        "362700c3-872c-4086-81df-7afda58c5be6",
+        "6f386731-807a-47f7-af90-608772318d99",
+        "bf4e71c4-6f7c-40a0-afe0-05a7f9b3cd6b",
+        "8a1ce9d8-ca42-4151-a7af-c235446be554",
+        "83148ae1-ea9b-4770-a142-8d5a60ebfffc",
+        "c39e14c7-9689-4b2d-9252-eb7f7a9b5e38",
+        "f1139b9c-8c9e-427b-8654-f596e246bcd4",
+        "21c74d2d-9dfe-46e0-859c-fdf225b6e8aa",
+        "771bd95d-c08b-495f-8b5c-5aed09bf9333",
+        "5a625c53-9857-4481-ab8d-6690b481df4f",
+        "3c0fdb29-1d20-405a-a8c5-3a893dbce4b2",
+        "48f899e0-6a6e-4b5a-8c33-ad6f23634b86"
       ]
     }
   ]

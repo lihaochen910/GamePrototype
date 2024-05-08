@@ -36,9 +36,9 @@ public class SimpleFadeScreenSystem : IMurderRenderSystem {
 					current = 1 - Math.Abs( ratio - 0.5f ) * 2;
 					break;
 			}
-
+			
 			RenderServices.DrawRectangle( render.UiBatch,
-				new(0, 0, render.ScreenSize.X, render.ScreenSize.Y),
+				new(0, 0, render.Viewport.Size.X, render.Viewport.Size.Y),
 				fade.Color * Calculator.Clamp01( Ease.CubeInOut( current ) ),
 				0.0001f ); // Not zero because the letterbox borders have priority
 
