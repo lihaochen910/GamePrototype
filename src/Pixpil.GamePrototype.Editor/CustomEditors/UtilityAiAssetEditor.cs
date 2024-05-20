@@ -87,7 +87,11 @@ internal class UtilityAiAssetEditor : CustomEditor {
 						ImGui.Indent( 12 );
 
 						// SearchBox.PushWindowSize( new ( 350, 350 ) );
-						if ( SearchBox.Search( "sUtilityAiReasoner_new", _utilityAiAsset.RootReasoner != null, _utilityAiAsset.RootReasoner != null ? _utilityAiAsset.RootReasoner.GetType().Name : "Select a UtilityAiReasoner Type", _reasonerTypes, SearchBoxFlags.None, out var reasonerTypeNew ) ) {
+						SearchBox.SearchBoxSettings< Type > settings = new ( "Select a UtilityAiReasoner Type" );
+						if ( _utilityAiAsset.RootReasoner != null ) {
+							settings.InitialSelected = new SearchBox.InitialSelectedValue< Type >( _utilityAiAsset.RootReasoner.GetType().Name, _utilityAiAsset.RootReasoner.GetType() );
+						}
+						if ( SearchBox.Search( "sUtilityAiReasoner_new", settings, _reasonerTypes, SearchBoxFlags.None, out var reasonerTypeNew ) ) {
 
 							bool isReplace = _utilityAiAsset.RootReasoner != null;
 							if ( isReplace ) {
@@ -263,12 +267,17 @@ internal class UtilityAiAssetEditor : CustomEditor {
 				}
 
 				var currentRevealedConsiderationName = _currentRevealedConsideration != null ? $"[{_utilityAiAsset.RootReasoner.Considerations.IndexOf( _currentRevealedConsideration )}] {_currentRevealedConsideration.GetType().Name}" : "Select a Consideration to reveal";
-				if ( SearchBox.Search( "sUtilityAiConsideration_Reveal", _currentRevealedConsideration != null, currentRevealedConsiderationName, candidateConsiderationsDefine, SearchBoxFlags.None, out var consideration ) ) {
+				SearchBox.SearchBoxSettings< UtilityAiConsideration > settings = new ( "Select a Consideration to reveal" );
+				if ( _currentRevealedConsideration != null ) {
+					settings.InitialSelected = new SearchBox.InitialSelectedValue< UtilityAiConsideration >( currentRevealedConsiderationName, _currentRevealedConsideration );
+				}
+				if ( SearchBox.Search( "sUtilityAiConsideration_Reveal", settings, candidateConsiderationsDefine, SearchBoxFlags.None, out var consideration ) ) {
 					_currentRevealedConsideration = consideration;
 				}
 				
 				ImGui.Separator();
-				if ( SearchBox.Search( "sUtilityAiConsideration_", false, "Add UtilityAiConsideration", UtilityAiConsiderationField.UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
+				SearchBox.SearchBoxSettings< Type > settings2 = new ( "Add UtilityAiConsideration" );
+				if ( SearchBox.Search( "sUtilityAiConsideration_", settings2, UtilityAiConsiderationField.UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
 					var newConsideration = Activator.CreateInstance( type, null ) as UtilityAiConsideration;
 					_utilityAiAsset.RootReasoner.Considerations = _utilityAiAsset.RootReasoner.Considerations.Add( newConsideration );
 					foreach ( var rc in _utilityAiAsset.RootReasoner.Considerations ) {
@@ -355,7 +364,11 @@ internal class UtilityAiAssetEditor : CustomEditor {
 						
 								// ImGui.SameLine();
 								ImGui.PushStyleColor( ImGuiCol.Text, Game.Profile.Theme.Green );
-								if ( SearchBox.Search( "sUtilityAiConsideration_Action", true, _currentRevealedConsideration.Action != null ? _currentRevealedConsideration.Action.Name : "Select a UtilityAiAction", candidateActionDefine, SearchBoxFlags.None, out var action ) ) {
+								SearchBox.SearchBoxSettings< UtilityAiAction > settings3 = new ( "Select a UtilityAiAction" );
+								if ( _currentRevealedConsideration.Action != null ) {
+									settings3.InitialSelected = new SearchBox.InitialSelectedValue< UtilityAiAction >( _currentRevealedConsideration.Action.Name, _currentRevealedConsideration.Action );
+								}
+								if ( SearchBox.Search( "sUtilityAiConsideration_Action", settings3, candidateActionDefine, SearchBoxFlags.None, out var action ) ) {
 									_currentRevealedConsideration.Action = action;
 									_utilityAiAsset.FileChanged = true;
 								}

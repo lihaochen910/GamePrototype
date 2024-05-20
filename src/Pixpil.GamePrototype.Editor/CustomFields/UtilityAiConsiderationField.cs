@@ -59,13 +59,17 @@ public class UtilityAiConsiderationField : CustomField {
             // ImGui.Text( "Action:" );
 			if ( consideration.FuncGetOwnerUtilityAiAsset is not null ) {
 				var utilityAiAsset = consideration.FuncGetOwnerUtilityAiAsset.Invoke();
+				SearchBox.SearchBoxSettings< UtilityAiAction > settings = new ( "Select a Variable Type##BlackboardSource" );
+				if ( consideration.Action != null ) {
+					settings.InitialSelected = new SearchBox.InitialSelectedValue< UtilityAiAction >( consideration.Action.Name, consideration.Action );
+				}
 				Lazy< Dictionary< string, UtilityAiAction > > candidateActionDefine = new(() => {
 					return CollectionHelper.ToStringDictionary( utilityAiAsset.Actions, a => a.Name, a => a );
 				} );
 				
 				// ImGui.SameLine();
 				ImGui.PushStyleColor( ImGuiCol.Text, Game.Profile.Theme.Green );
-				if ( SearchBox.Search( "sUtilityAiConsideration_Action", true, consideration.Action != null ? consideration.Action.Name : "Select a UtilityAiAction", candidateActionDefine, SearchBoxFlags.None, out var action ) ) {
+				if ( SearchBox.Search( "sUtilityAiConsideration_Action", settings, candidateActionDefine, SearchBoxFlags.None, out var action ) ) {
 					consideration.Action = action;
 					modified = true;
 				}
@@ -98,7 +102,8 @@ public class UtilityAiConsiderationField : CustomField {
 			return ( modified, consideration );
 		}
 		else {
-			if ( SearchBox.Search( $"sUtilityAiConsiderationTypes_{member.Name}", false, "Select a type of UtilityAiConsideration", UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
+			SearchBox.SearchBoxSettings< Type > settings = new ( "Select a type of UtilityAiConsideration" );
+			if ( SearchBox.Search( $"sUtilityAiConsiderationTypes_{member.Name}", settings, UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
 				if ( type is not null ) {
 					fieldValue = Activator.CreateInstance( type, null ) as UtilityAiConsideration;
 					modified = true;
@@ -129,7 +134,8 @@ public class UtilityAiConsiderationField : CustomField {
 
 
 	public static (bool modified, UtilityAiConsideration result) DrawReplaceUtilityAiConsiderationSearchBox( UtilityAiConsideration consideration ) {
-		if ( SearchBox.Search( $"sUtilityAiConsiderationTypes_{consideration.GetHashCode()}", false, "Replace with UtilityAiConsideration", UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
+		SearchBox.SearchBoxSettings< Type > settings = new ( "Replace with UtilityAiConsideration" );
+		if ( SearchBox.Search( $"sUtilityAiConsiderationTypes_{consideration.GetHashCode()}", settings, UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
 			if ( type is null ) {
 				return ( true, null );
 			}

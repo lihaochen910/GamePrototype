@@ -18,9 +18,11 @@ namespace Pixpil.Editor.CustomFields;
 internal class ImmutableArrayUtilityAiConsiderationField : ImmutableArrayField< UtilityAiConsideration > {
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out UtilityAiConsideration element ) {
+		
+		SearchBox.SearchBoxSettings< Type > settings = new ( "Add UtilityAiConsideration" );
 
 		ImGui.Separator();
-		if ( SearchBox.Search( "sUtilityAiConsideration_", false, "Add UtilityAiConsideration", UtilityAiConsiderationField.UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
+		if ( SearchBox.Search( "sUtilityAiConsideration_", settings, UtilityAiConsiderationField.UtilityAiConsiderationTypes, SearchBoxFlags.None, out var type ) ) {
 			element = Activator.CreateInstance( type, null ) as UtilityAiConsideration;
 			return true;
 		}

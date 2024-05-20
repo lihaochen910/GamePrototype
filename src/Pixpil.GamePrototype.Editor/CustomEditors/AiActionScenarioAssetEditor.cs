@@ -126,7 +126,8 @@ internal class AiActionScenarioAssetEditor : CustomEditor {
 								_aiScenarioAsset.FileChanged = true;
 							}
 						}
-						if ( SearchBox.Search( $"sActionImplItem_new{i}_{name}", false, "Select a AiActionScenario", _actionImplTypes, SearchBoxFlags.None, out var actionImplNew ) ) {
+						SearchBox.SearchBoxSettings< Type > settings = new ( "Select a AiActionScenario" );
+						if ( SearchBox.Search( $"sActionImplItem_new{i}_{name}", settings, _actionImplTypes, SearchBoxFlags.None, out var actionImplNew ) ) {
 							// action.Impl = ;
 							action.GetType().GetField( nameof( AiActionScenario.Impl ), BindingFlags.Public | BindingFlags.Instance ).SetValue( action, action.Impl.Add( Activator.CreateInstance( actionImplNew, null ) as AiAction ) );
 							_aiScenarioAsset.FileChanged = true;
@@ -149,7 +150,11 @@ internal class AiActionScenarioAssetEditor : CustomEditor {
 					return CollectionHelper.ToStringDictionary( _aiScenarioAsset.Actions, a => $"{a.Name} #{a.GetHashCode():x8}", a => a );
 				} );
                 
-                if ( SearchBox.Search( "sAiActionScenarioItem", _currentRevealedAction != null, _currentRevealedAction != null ? $"{_currentRevealedAction.Name} #{_currentRevealedAction.GetHashCode():x8}" : "Select a AiActionScenario to Reveal", candidateActionDefine, SearchBoxFlags.None, out var actionItem ) ) {
+				SearchBox.SearchBoxSettings< AiActionScenario > settings = new ( "Select a AiActionScenario to Reveal" );
+				if ( _currentRevealedAction != null ) {
+					settings.InitialSelected = new SearchBox.InitialSelectedValue< AiActionScenario >( $"{_currentRevealedAction.Name} #{_currentRevealedAction.GetHashCode():x8}", _currentRevealedAction );
+				}
+                if ( SearchBox.Search( "sAiActionScenarioItem", settings, candidateActionDefine, SearchBoxFlags.None, out var actionItem ) ) {
 					_currentRevealedAction = actionItem;
 				}
 

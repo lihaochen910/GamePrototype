@@ -68,10 +68,15 @@ internal class RPGStatModifierField : CustomField {
 	} );
 
 	public override (bool modified, object result) ProcessInput( EditorMember member, object fieldValue ) {
+		SearchBox.SearchBoxSettings< Type > settings = new ( "Select a RPGStatModifier" );
+		if ( fieldValue != null ) {
+			settings.InitialSelected = new SearchBox.InitialSelectedValue< Type >( fieldValue.GetType().Name, fieldValue.GetType() );
+		}
+		
 		bool modified = false;
 		if ( fieldValue is not null ) {
 			modified |= CustomComponent.DrawAllMembers( fieldValue );
-			if ( SearchBox.Search( $"sRPGStatModifierTypes_{fieldValue.GetHashCode()}", fieldValue != null, fieldValue != null ? fieldValue.GetType().Name : "Select a RPGStatModifier", _modifierImplTypes, SearchBoxFlags.None, out var modifierImplType ) ) {
+			if ( SearchBox.Search( $"sRPGStatModifierTypes_{fieldValue.GetHashCode()}", settings, _modifierImplTypes, SearchBoxFlags.None, out var modifierImplType ) ) {
 				if ( modifierImplType is null ) {
 					return ( true, null );
 				}
@@ -80,7 +85,7 @@ internal class RPGStatModifierField : CustomField {
 			return ( modified, fieldValue );
 		}
 		else {
-			if ( SearchBox.Search( $"sConditionImplTypes_{member.Name}", false, "Select a RPGStatModifier", _modifierImplTypes, SearchBoxFlags.None, out var newConditionImplType ) ) {
+			if ( SearchBox.Search( $"sConditionImplTypes_{member.Name}", settings, _modifierImplTypes, SearchBoxFlags.None, out var newConditionImplType ) ) {
 				if ( newConditionImplType is not null ) {
 					fieldValue = Activator.CreateInstance( newConditionImplType, new object[] { 0f, true } ) as RPGStatModifier;
 					modified = true;

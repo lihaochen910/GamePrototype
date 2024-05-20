@@ -27,8 +27,9 @@ internal class ImmutableArrayUtilityAiIAppraisalField : ImmutableArrayField< IAp
 	} );
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out IAppraisal element ) {
+		SearchBox.SearchBoxSettings< Type > settings = new ( "Add UtilityAiIAppraisal" );
 
-		if ( SearchBox.Search( "sUtilityAiIAppraisal_", false, "Add UtilityAiIAppraisal", UtilityAiIAppraisalTypes, SearchBoxFlags.None, out var type ) ) {
+		if ( SearchBox.Search( "sUtilityAiIAppraisal_", settings, UtilityAiIAppraisalTypes, SearchBoxFlags.None, out var type ) ) {
 			try {
 				element = Activator.CreateInstance( type, null ) as IAppraisal;
 				return true;

@@ -54,8 +54,10 @@ namespace Pixpil.Editor.CustomFields;
 internal class ImmutableArrayInventoryEntryField : ImmutableArrayField< InventoryEntry > {
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out InventoryEntry element ) {
+		
+		SearchBox.SearchBoxSettings< ItemType > settings = new ( initialText: "Select a ItemType" );
 
-		if ( SearchBox.Search( "sInventoryEntry_add", false, "Select a ItemType", ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
+		if ( SearchBox.Search( "sInventoryEntry_add", settings, ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
 			element = new InventoryEntry { ItemType = newItemType, Count = 0 };
 			return true;
 		}
@@ -97,8 +99,10 @@ internal class ImmutableArrayInventoryEntryField : ImmutableArrayField< Inventor
 internal class ImmutableArrayReadOnlyInventoryEntryField : ImmutableArrayField< ReadOnlyInventoryEntry > {
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out ReadOnlyInventoryEntry element ) {
+		
+		SearchBox.SearchBoxSettings< ItemType > settings = new ( initialText: "Select a ItemType" );
 
-		if ( SearchBox.Search( "sInventoryEntry_add", false, "Select a ItemType", ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
+		if ( SearchBox.Search( "sInventoryEntry_add", settings, ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
 			element = new ReadOnlyInventoryEntry { ItemType = newItemType, Count = 0 };
 			return true;
 		}
@@ -124,7 +128,9 @@ internal class ImmutableArrayReadOnlyInventoryEntryField : ImmutableArrayField< 
 internal class ArrayInventoryEntryField : ArrayGenericField< InventoryEntry > {
 
 	protected override bool Add( in EditorMember member, out InventoryEntry element ) {
-		if ( SearchBox.Search( "sInventoryEntry_add", false, "Select a ItemType", ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
+		SearchBox.SearchBoxSettings< ItemType > settings = new ( initialText: "Select a ItemType" );
+		
+		if ( SearchBox.Search( "sInventoryEntry_add", settings, ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
 			element = new InventoryEntry { ItemType = newItemType, Count = 0 };
 			return true;
 		}
@@ -141,8 +147,12 @@ public class ItemTypeField : CustomField {
 	public override (bool modified, object result) ProcessInput( EditorMember member, object fieldValue ) {
 		bool modified = false;
 		var itemType = fieldValue as ItemType;
+		SearchBox.SearchBoxSettings< ItemType > settings = new ( itemType != null ? itemType.Id : "Select a ItemType" );
+		if ( itemType != null ) {
+			settings.InitialSelected = new SearchBox.InitialSelectedValue< ItemType >( itemType.Id, itemType );
+		}
 		
-		if ( SearchBox.Search( "sItemType", itemType != null, itemType != null ? itemType.Id : "Select a ItemType", ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
+		if ( SearchBox.Search( "sItemType", settings, ItemTypeServices.ItemTypesLookup, SearchBoxFlags.None, out var newItemType ) ) {
 			itemType = newItemType;
 			return ( true, itemType );
 		}

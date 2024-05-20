@@ -25,7 +25,9 @@ internal class ImmutableArrayGoapConditionField : ImmutableArrayField< GoapCondi
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out GoapCondition element ) {
 
-		if ( SearchBox.Search( "sGoapCondition_", false, "Select a type of GoapCondition", _conditionImplTypes, SearchBoxFlags.None, out var newConditionImplType ) ) {
+		SearchBox.SearchBoxSettings< Type > settings = new ( initialText: "Select a type of GoapCondition" );
+		
+		if ( SearchBox.Search( "sGoapCondition_", settings, _conditionImplTypes, SearchBoxFlags.None, out var newConditionImplType ) ) {
 			element = Activator.CreateInstance( newConditionImplType, null ) as GoapCondition;
 			return true;
 		}

@@ -24,8 +24,10 @@ internal class ImmutableArrayAiActionField : ImmutableArrayField< AiAction > {
 	} );
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out AiAction element ) {
+		
+		SearchBox.SearchBoxSettings< Type > settings = new ( "Add AiAction" );
 
-		if ( SearchBox.Search( "sAiAction_", false, "Add AiAction", _actionImplTypes, SearchBoxFlags.None, out var newActionImplType ) ) {
+		if ( SearchBox.Search( "sAiAction_", settings, _actionImplTypes, SearchBoxFlags.None, out var newActionImplType ) ) {
 			element = Activator.CreateInstance( newActionImplType, null ) as AiAction;
 			return true;
 		}

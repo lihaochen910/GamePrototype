@@ -188,7 +188,11 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							}
 						}
 				
-						if ( SearchBox.Search( $"sConditionImplTypes_{conditionItem.GetHashCode()}", condImpl != null, condImpl != null ? condImpl.GetType().Name : "Select a type of GoapCondition", _conditionImplTypes, SearchBoxFlags.None, out var newConditionImplType ) ) {
+						SearchBox.SearchBoxSettings< Type > settings = new ( "Select a type of GoapCondition" );
+						if ( condImpl != null ) {
+							settings.InitialSelected = new SearchBox.InitialSelectedValue< Type >( condImpl.GetType().Name, condImpl.GetType() );
+						}
+						if ( SearchBox.Search( $"sConditionImplTypes_{conditionItem.GetHashCode()}", settings, _conditionImplTypes, SearchBoxFlags.None, out var newConditionImplType ) ) {
 							if ( newConditionImplType is null ) {
 								var dict = _goapScenarioAsset.Conditions.ToDictionary();
 								if ( dict.ContainsKey( conditionItem ) ) {
@@ -287,7 +291,8 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 						ImGui.PopID();
 						ImGui.SameLine();
 						
-						if ( SearchBox.Search( $"sConditionItem_{conditionKV.Key}", true, conditionKV.Key, candidateConditionDefine, SearchBoxFlags.None, out var conditionItem ) ) {
+						SearchBox.SearchBoxSettings< string > settings = new ( conditionKV.Key ) { InitialSelected = new SearchBox.InitialSelectedValue< string >( conditionKV.Key, conditionKV.Key ) };
+						if ( SearchBox.Search( $"sConditionItem_{conditionKV.Key}", settings, candidateConditionDefine, SearchBoxFlags.None, out var conditionItem ) ) {
 							var builder = ImmutableDictionary.CreateBuilder< string, bool >();
 							if ( goal.Conditions != null ) {
 								builder.AddRange( goal.Conditions );
@@ -303,8 +308,9 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							break;
 						}
 					}
-					
-					if ( SearchBox.Search( "sConditionItem_new", false, "Select a Condition", candidateConditionDefine, SearchBoxFlags.None, out var conditionItemNew ) ) {
+
+					SearchBox.SearchBoxSettings< string > settings2 = new ( "Select a Condition" );
+					if ( SearchBox.Search( "sConditionItem_new", settings2, candidateConditionDefine, SearchBoxFlags.None, out var conditionItemNew ) ) {
 						var builder = ImmutableDictionary.CreateBuilder< string, bool >();
 						if ( goal.Conditions != null ) {
 							builder.AddRange( goal.Conditions );
@@ -450,7 +456,8 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							}
 							ImGui.PopID();
 							ImGui.SameLine();
-							if ( SearchBox.Search( $"sActionPreConditionItem_{preKV.Key}", true, $"{preKV.Key} \t#Pre", candidateConditionDefine, SearchBoxFlags.None, out var conditionItem ) ) {
+							SearchBox.SearchBoxSettings< string > settings = new ( $"{preKV.Key} \t#Pre" ) { InitialSelected = new SearchBox.InitialSelectedValue< string >( preKV.Key, preKV.Key ) };
+							if ( SearchBox.Search( $"sActionPreConditionItem_{preKV.Key}", settings, candidateConditionDefine, SearchBoxFlags.None, out var conditionItem ) ) {
 								var builder = ImmutableDictionary.CreateBuilder< string, bool >();
 								if ( action.Pre != null ) {
 									builder.AddRange( action.Pre );
@@ -466,7 +473,8 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							}
 						}
 					}
-					if ( SearchBox.Search( $"sActionPreConditionItem_new{i}_{name}", false, "Select a Pre Condition", candidateConditionDefine, SearchBoxFlags.None, out var conditionItemNew ) ) {
+					SearchBox.SearchBoxSettings< string > settings2 = new ( "Select a Pre Condition" );
+					if ( SearchBox.Search( $"sActionPreConditionItem_new{i}_{name}", settings2, candidateConditionDefine, SearchBoxFlags.None, out var conditionItemNew ) ) {
 						var builder = ImmutableDictionary.CreateBuilder< string, bool >();
 						if ( action.Pre != null ) {
 							builder.AddRange( action.Pre );
@@ -493,7 +501,8 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							}
 							ImGui.PopID();
 							ImGui.SameLine();
-							if ( SearchBox.Search( $"sActionPostConditionItem_{postKV.Key}", true, $"{postKV.Key} \t#Post", candidateConditionDefine, SearchBoxFlags.None, out var conditionItem ) ) {
+							SearchBox.SearchBoxSettings< string > settings3 = new ( $"{postKV.Key} \t#Post" ) { InitialSelected = new SearchBox.InitialSelectedValue< string >( postKV.Key, postKV.Key ) };
+							if ( SearchBox.Search( $"sActionPostConditionItem_{postKV.Key}", settings3, candidateConditionDefine, SearchBoxFlags.None, out var conditionItem ) ) {
 								var builder = ImmutableDictionary.CreateBuilder< string, bool >();
 								if ( action.Post != null ) {
 									builder.AddRange( action.Post );
@@ -509,7 +518,8 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							}
 						}
 					}
-					if ( SearchBox.Search( $"sActionPostConditionItem_new{i}_{name}", false, "Select a Post Condition", candidateConditionDefine, SearchBoxFlags.None, out var conditionItemPostNew ) ) {
+					SearchBox.SearchBoxSettings< string > settings4 = new ( "Select a Post Condition" );
+					if ( SearchBox.Search( $"sActionPostConditionItem_new{i}_{name}", settings4, candidateConditionDefine, SearchBoxFlags.None, out var conditionItemPostNew ) ) {
 						var builder = ImmutableDictionary.CreateBuilder< string, bool >();
 						if ( action.Post != null ) {
 							builder.AddRange( action.Post );
@@ -537,7 +547,8 @@ internal class GoapScenarioAssetEditor : CustomEditor {
 							_goapScenarioAsset.FileChanged = true;
 						}
 					}
-					if ( SearchBox.Search( $"sActionImplItem_new{i}_{name}", false, "Select a GoapAction", _actionImplTypes, SearchBoxFlags.None, out var actionImplNew ) ) {
+					SearchBox.SearchBoxSettings< Type > settings = new ( "Select a GoapAction" );
+					if ( SearchBox.Search( $"sActionImplItem_new{i}_{name}", settings, _actionImplTypes, SearchBoxFlags.None, out var actionImplNew ) ) {
 						action.Impl = action.Impl.Add( Activator.CreateInstance( actionImplNew, null ) as GoapAction );
 						_goapScenarioAsset.FileChanged = true;
 					}

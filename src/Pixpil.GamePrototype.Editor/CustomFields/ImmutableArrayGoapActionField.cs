@@ -25,8 +25,10 @@ internal class ImmutableArrayGoapActionField : ImmutableArrayField< GoapAction >
 	} );
 	
 	protected override bool Add( in EditorMember member, [NotNullWhen( true )] out GoapAction element ) {
+		
+		SearchBox.SearchBoxSettings< Type > settings = new ( "Select a type of GoapAction" );
 
-		if ( SearchBox.Search( "sGoapAction_", false, "Select a type of GoapAction", _actionImplTypes, SearchBoxFlags.None, out var newActionImplType ) ) {
+		if ( SearchBox.Search( "sGoapAction_", settings, _actionImplTypes, SearchBoxFlags.None, out var newActionImplType ) ) {
 			element = Activator.CreateInstance( newActionImplType, null ) as GoapAction;
 			return true;
 		}

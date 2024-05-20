@@ -79,8 +79,9 @@ public class BlackboardComponentEditor : CustomComponent {
 			// ImGui.PushID( "Search Variable Type##BlackboardSource" );
 
 			SearchBox.PushItemWidth( 350 );
+			SearchBox.SearchBoxSettings< Type > settings = new ( "Select a Variable Type##BlackboardSource" );
 			// if ( SearchBox.Search( "s_VariableT", _newVariableType != null, _newVariableType != null ? _newVariableType.Name : "Select a Variable Type##BlackboardSource", SupportedVariableTypes, SearchBoxFlags.None, out Type? newVariableType ) ) {
-			if ( SearchBox.Search( "s_VariableT", false, "Select a Variable Type##BlackboardSource", SupportedVariableTypes, SearchBoxFlags.None, out Type? newVariableType ) ) {
+			if ( SearchBox.Search( "s_VariableT", settings, SupportedVariableTypes, SearchBoxFlags.None, out Type? newVariableType ) ) {
 				_newVariableType = newVariableType;
 			}
 			SearchBox.PopItemWidth();
