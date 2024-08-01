@@ -29,6 +29,10 @@
       "Item2": true
     },
     {
+      "Item1": "Murder.Systems.CursorSystem, Murder.Editor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
       "Item1": "Murder.Editor.Systems.EntitiesSelectorSystem, Murder.Editor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Item2": true
     },

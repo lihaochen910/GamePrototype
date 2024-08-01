@@ -21,7 +21,7 @@
     <RootNamespace>Pixpil.GamePrototype.Editor</RootNamespace>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' or '$(Configuration)' == 'DebugMurderFNA' ">
     <DefineConstants Condition=" '$(OS)' == 'Windows_NT' ">TRACE;WINDOWS</DefineConstants>
     <DefineConstants Condition=" '$(OS)' == 'UNIX' ">TRACE;MACOS</DefineConstants>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

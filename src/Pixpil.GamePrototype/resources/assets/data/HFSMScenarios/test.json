@@ -1,0 +1,297 @@
+{
+  "$type": "Pixpil.AI.HFSMScenarioAsset",
+  "RootFsmScenario": {
+    "States": [
+      {
+        "Name": "State_0",
+        "IsStartState": true,
+        "IsGhostState": false,
+        "Impl": [
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+            "Msg": "State_0!",
+            "LogOnInit": false,
+            "LogOnEnter": true,
+            "LogOnLogic": false,
+            "LogOnExit": false,
+            "IsActived": true
+          },
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionDelayTrigger",
+            "TriggerTarget": 0,
+            "Trigger": "Ev1",
+            "Delay": 1,
+            "IsActived": true
+          }
+        ],
+        "Transitions": [
+          {
+            "Event": "Ev1",
+            "TransitionTo": "State_1"
+          }
+        ],
+        "GlobalTransitions": [],
+        "PositionInEditor": {
+          "X": 212,
+          "Y": 279
+        }
+      },
+      {
+        "Name": "State_1",
+        "IsStartState": false,
+        "IsGhostState": false,
+        "Impl": [
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+            "Msg": "State_1!",
+            "LogOnInit": false,
+            "LogOnEnter": true,
+            "LogOnLogic": false,
+            "LogOnExit": false,
+            "IsActived": true
+          },
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionDelayTriggerCo",
+            "Trigger": "Ev1",
+            "Delay": 1,
+            "IsActived": true
+          }
+        ],
+        "Transitions": [
+          {
+            "Event": "Ev1",
+            "TransitionTo": "State_2"
+          }
+        ],
+        "GlobalTransitions": [],
+        "PositionInEditor": {
+          "X": 929,
+          "Y": 437
+        }
+      },
+      {
+        "Name": "State_2",
+        "IsStartState": false,
+        "IsGhostState": false,
+        "Impl": [
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+            "Msg": "State_2!",
+            "LogOnInit": false,
+            "LogOnEnter": true,
+            "LogOnLogic": false,
+            "LogOnExit": false,
+            "IsActived": true
+          },
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionDelayTrigger",
+            "TriggerTarget": 0,
+            "Trigger": "Ev2",
+            "Delay": 1,
+            "IsActived": true
+          }
+        ],
+        "Transitions": [],
+        "GlobalTransitions": [],
+        "PositionInEditor": {
+          "X": 632,
+          "Y": 716
+        }
+      }
+    ],
+    "ChildrenStateMachine": [
+      {
+        "States": [
+          {
+            "Name": "CState_0",
+            "IsStartState": true,
+            "IsGhostState": false,
+            "Impl": [
+              {
+                "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+                "Msg": "Child0 CState0!",
+                "LogOnInit": false,
+                "LogOnEnter": true,
+                "LogOnLogic": false,
+                "LogOnExit": false,
+                "IsActived": true
+              },
+              {
+                "$type": "Pixpil.AI.HFSM.Test.ActionDelayTrigger",
+                "TriggerTarget": 0,
+                "Trigger": "Ev3",
+                "Delay": 1,
+                "IsActived": true
+              }
+            ],
+            "Transitions": [
+              {
+                "Event": "Ev3",
+                "TransitionTo": "CState_1"
+              }
+            ],
+            "GlobalTransitions": [],
+            "PositionInEditor": {
+              "X": 627,
+              "Y": 545
+            }
+          },
+          {
+            "Name": "CState_1",
+            "IsStartState": false,
+            "IsGhostState": false,
+            "Impl": [
+              {
+                "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+                "Msg": "Child0 CState1!",
+                "LogOnInit": false,
+                "LogOnEnter": true,
+                "LogOnLogic": false,
+                "LogOnExit": false,
+                "IsActived": true
+              },
+              {
+                "$type": "Pixpil.AI.HFSM.Test.ActionDelayTrigger",
+                "TriggerTarget": 0,
+                "Trigger": "Ev3",
+                "Delay": 1,
+                "IsActived": true
+              }
+            ],
+            "Transitions": [
+              {
+                "Event": "Ev3",
+                "TransitionTo": "Child00 FSM"
+              }
+            ],
+            "GlobalTransitions": [],
+            "PositionInEditor": {
+              "X": 1012,
+              "Y": 548
+            }
+          },
+          {
+            "Name": "ExitState",
+            "IsStartState": false,
+            "IsGhostState": false,
+            "Impl": [
+              {
+                "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+                "Msg": "Child0 ExitState!",
+                "LogOnInit": false,
+                "LogOnEnter": true,
+                "LogOnLogic": false,
+                "LogOnExit": false,
+                "IsActived": true
+              },
+              {
+                "$type": "Pixpil.AI.HFSM.Test.ActionDelayTrigger",
+                "TriggerTarget": 1,
+                "Trigger": "Ev1",
+                "Delay": 0,
+                "IsActived": true
+              }
+            ],
+            "Transitions": [],
+            "GlobalTransitions": [
+              {
+                "Event": "Ev2"
+              }
+            ],
+            "PositionInEditor": {
+              "X": 885.5,
+              "Y": 215
+            }
+          }
+        ],
+        "ChildrenStateMachine": [
+          {
+            "States": [
+              {
+                "Name": "NewState",
+                "IsStartState": true,
+                "IsGhostState": false,
+                "Impl": [
+                  {
+                    "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+                    "Msg": "Child00 State!",
+                    "LogOnInit": false,
+                    "LogOnEnter": true,
+                    "LogOnLogic": false,
+                    "LogOnExit": false,
+                    "IsActived": true
+                  },
+                  {
+                    "$type": "Pixpil.AI.HFSM.Test.ActionDelayTrigger",
+                    "TriggerTarget": 1,
+                    "Trigger": "Ev2",
+                    "Delay": 1,
+                    "IsActived": true
+                  }
+                ],
+                "Transitions": [],
+                "GlobalTransitions": [],
+                "PositionInEditor": {
+                  "X": 628,
+                  "Y": 548
+                }
+              }
+            ],
+            "ChildrenStateMachine": [],
+            "Name": "Child00 FSM",
+            "IsStartState": false,
+            "IsGhostState": false,
+            "Impl": [],
+            "Transitions": [],
+            "GlobalTransitions": [],
+            "PositionInEditor": {
+              "X": 1349,
+              "Y": 430
+            }
+          }
+        ],
+        "Name": "Child_0",
+        "IsStartState": false,
+        "IsGhostState": false,
+        "Impl": [],
+        "Transitions": [
+          {
+            "Event": "Ev1",
+            "TransitionTo": "State_0"
+          }
+        ],
+        "GlobalTransitions": [
+          {
+            "Event": "Ev2"
+          }
+        ],
+        "PositionInEditor": {
+          "X": 630,
+          "Y": 44
+        }
+      }
+    ],
+    "Name": "Root",
+    "IsStartState": false,
+    "IsGhostState": false,
+    "Impl": [
+      {
+        "$type": "Pixpil.AI.HFSM.Test.ActionDrawActiveHierarchyPath",
+        "IsActived": true
+      }
+    ],
+    "Transitions": [],
+    "GlobalTransitions": [],
+    "PositionInEditor": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Triggers": [
+    "Ev1",
+    "Ev2",
+    "Ev3"
+  ],
+  "Name": "test",
+  "Guid": "9df20542-87e3-4619-9ed0-da3a66450fc5"
+}
