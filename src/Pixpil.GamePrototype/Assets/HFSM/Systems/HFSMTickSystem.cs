@@ -79,19 +79,28 @@ public class HFSMTickSystem : IUpdateSystem, IFixedUpdateSystem, IReactiveSystem
 		if ( hfsmAgent.StateMachine is null || hfsmAgent.StateMachine.AssetGuid != hfsmAgent.FsmAsset ) {
 			var hfsmScenarioAsset = Game.Data.TryGetAsset< HFSMScenarioAsset >( hfsmAgent.FsmAsset );
 			if ( hfsmScenarioAsset is not null ) {
-				if ( entity.GetHFSMAgent().StateMachine is not null && entity.HasHFSMAgentHistory() ) {
-					entity.GetHFSMAgent().StateMachine.StateChangedYetAnother -= entity.GetHFSMAgentHistory().StateChangedCallback;
+				if ( entity.GetHFSMAgent().StateMachine is not null && entity.TryGetHFSMAgentHistory() is {} hfsmAgentHistoryComponent ) {
+					entity.GetHFSMAgent().StateMachine.TravelSelfAndChildrenStateMachines( fsm => {
+						foreach ( var stateChangedCallback in hfsmAgentHistoryComponent.StateChangedCallbacks ) {
+							fsm.StateChangedYetAnother -= stateChangedCallback;
+						}
+					} );
 				}
 				
 				var stateMachineInstance = hfsmScenarioAsset.CreateInstance( world, entity );
                 stateMachineInstance.Init();
 
 				if ( entity.TryGetHFSMAgentHistory() is {} hfsmAgentHistory ) {
-					var stateChangedCallback = ( StateBase< string > from, StateBase< string > to, TransitionBase< string > transition ) => {
-						OnStateChanged( entity, from, to, transition );
-					};
-					stateMachineInstance.StateChangedYetAnother += stateChangedCallback;
-					entity.SetHFSMAgentHistory( hfsmAgentHistory.Capacity, hfsmAgentHistory.Deque, stateChangedCallback );
+					ImmutableArray< Action< StateBase< string >, StateBase< string >, TransitionBase< string > > > stateChangedCallbacks = ImmutableArray< Action< StateBase< string > , StateBase< string >, TransitionBase< string > > >.Empty;
+					stateMachineInstance.TravelSelfAndChildrenStateMachines( fsm => {
+						var stateChangedCallback = ( StateBase< string > from, StateBase< string > to, TransitionBase< string > transition ) => {
+							OnStateChanged( entity, fsm, from, to, transition );
+						};
+						fsm.StateChangedYetAnother += stateChangedCallback;
+						stateChangedCallbacks = stateChangedCallbacks.Add( stateChangedCallback );
+					} );
+					
+					entity.SetHFSMAgentHistory( hfsmAgentHistory.Capacity, hfsmAgentHistory.Deque, stateChangedCallbacks );
 				}
 				
 				entity.SetHFSMAgent( hfsmAgent.FsmAsset, stateMachineInstance );
@@ -108,7 +117,7 @@ public class HFSMTickSystem : IUpdateSystem, IFixedUpdateSystem, IReactiveSystem
 		}
 	}
 
-	private void OnStateChanged( Entity entity, StateBase< string > from, StateBase< string > to, TransitionBase< string > transition ) {
+	private void OnStateChanged( Entity entity, StateMachine< string, string, string > fsm, StateBase< string > from, StateBase< string > to, TransitionBase< string > transition ) {
 		
 		string BuildStackTrace( int count ) {
 			#if DEBUG
@@ -132,7 +141,7 @@ public class HFSMTickSystem : IUpdateSystem, IFixedUpdateSystem, IReactiveSystem
 			#endif
 		}
 		
-		var historyEntry = new HFSMStateHistroyEntry( from, to, transition as Transition, Game.Now, BuildStackTrace( 15 ) );
+		var historyEntry = new HFSMStateHistroyEntry( fsm, from, to, transition as Transition, Game.Now, BuildStackTrace( 15 ) );
 
 		var capacity = entity.GetHFSMAgentHistory().Capacity;
 		var deque = entity.GetHFSMAgentHistory().Deque;
@@ -144,7 +153,7 @@ public class HFSMTickSystem : IUpdateSystem, IFixedUpdateSystem, IReactiveSystem
 			deque.DequeueTail();
 		}
 		
-		entity.SetHFSMAgentHistory( capacity, deque, entity.GetHFSMAgentHistory().StateChangedCallback );
+		entity.SetHFSMAgentHistory( capacity, deque, entity.GetHFSMAgentHistory().StateChangedCallbacks );
 	}
 	
 }

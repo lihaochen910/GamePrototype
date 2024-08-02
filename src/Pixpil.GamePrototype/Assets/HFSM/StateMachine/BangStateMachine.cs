@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Immutable;
+using System.Linq;
 using Bang;
 using Bang.Entities;
+using DigitalRune.Linq;
 #if MURDER
 using Murder.Core.Graphics;
 using Murder.Diagnostics;
@@ -127,6 +129,17 @@ public class BangStateMachine : StateMachine< string, string, string > {
 		// 		GameLogger.Error( $"unsupported state: {stateBundle.state.GetType().Name}" );
 		// 	}
 		// }
+	}
+	
+	public void TravelSelfAndChildrenStateMachines( Action< StateMachine< string, string, string > > func ) {
+		var enumerable =
+			TreeHelper.GetDescendants( ( StateMachine< string, string, string > )this,
+				s => s.StateBundles.Values.Where( sb => sb.state is StateMachine< string, string, string > )
+					  .Select( sb => ( StateMachine< string, string, string > )sb.state ).AsEnumerable() );
+		foreach ( var stateMachine in enumerable ) {
+			func?.Invoke( stateMachine );
+		}
+		func?.Invoke( this );
 	}
 
 	private BangStateMachine FindRootBangStateMachine() {

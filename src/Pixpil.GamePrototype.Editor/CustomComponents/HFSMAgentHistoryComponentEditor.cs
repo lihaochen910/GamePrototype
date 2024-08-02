@@ -32,12 +32,12 @@ public class HFSMAgentHistoryComponentEditor : CustomComponent {
 					ImGui.TableNextColumn();
 					
 					ImGui.PushStyleColor( ImGuiCol.Text, Game.Profile.Theme.Green );
-					ImGui.Text( $"{entry.To.Name}" );
+					ImGui.Text( $"{entry.To?.Name}" );
 					ImGui.PopStyleColor();
 					
 					if ( ImGui.IsItemHovered() ) {
 						if ( !string.IsNullOrEmpty( entry.StackTrace ) ) {
-							ImGuiHelpers.HelpTooltip( $"{entry.StackTrace}" );
+							ImGuiHelpers.HelpTooltip( $"{entry.Fsm.GetActiveHierarchyPath()}\n{entry.From?.GetActiveHierarchyPath()} -> {entry.To?.GetActiveHierarchyPath()}\n{entry.StackTrace}" );
 						}
 					}
 					
@@ -48,7 +48,7 @@ public class HFSMAgentHistoryComponentEditor : CustomComponent {
 
 					ImGui.SameLine();
 					ImGui.PushStyleColor( ImGuiCol.Text, Game.Profile.Theme.Faded );
-					ImGui.Text( $"{entry.From.Name}" );
+					ImGui.Text( $"{entry.From?.Name}" );
 					ImGui.PopStyleColor();
 
 					ImGui.TableNextColumn();
