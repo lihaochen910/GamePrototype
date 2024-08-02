@@ -12,8 +12,8 @@ namespace Pixpil.AI.HFSM;
 
 public class BangStateMachine : StateMachine< string, string, string > {
 
-	public World World { get; private set; }
-	public Entity Entity { get; private set; }
+	public World World { get; internal set; }
+	public Entity Entity { get; internal set; }
 
 	internal Guid AssetGuid;
 	
@@ -103,30 +103,30 @@ public class BangStateMachine : StateMachine< string, string, string > {
 
 	public void SetActions( ImmutableArray< HFSMStateAction > actions ) => _actions = actions;
 
-	public void SetBangContext( World world, Entity entity ) {
-		World = world;
-		Entity = entity;
-
+	public void SetActionsBangContext( World world, Entity entity ) {
 		if ( !_actions.IsDefaultOrEmpty ) {
 			foreach ( var hfsmStateAction in _actions ) {
 				hfsmStateAction.Fsm = this;
 				hfsmStateAction.RootFsm = FindRootBangStateMachine();
+				hfsmStateAction.State = this;
+				hfsmStateAction.World = world;
+				hfsmStateAction.Entity = entity;
 			}
 		}
 		
-		foreach ( var stateBundle in StateBundles.Values ) {
-			if ( stateBundle.state is BangActionState< string > bangActionState ) {
-				bangActionState.World = world;
-				bangActionState.Entity = entity;
-				bangActionState.SetActionsOwnStateMachine( this, FindRootBangStateMachine() );
-			}
-			else if ( stateBundle.state is BangStateMachine stateMachine ) {
-				stateMachine.SetBangContext( world, entity );
-            }
-			else {
-				GameLogger.Error( $"unsupported state: {stateBundle.state.GetType().Name}" );
-			}
-		}
+		// foreach ( var stateBundle in StateBundles.Values ) {
+		// 	if ( stateBundle.state is BangActionState< string > bangActionState ) {
+		// 		bangActionState.World = world;
+		// 		bangActionState.Entity = entity;
+		// 		bangActionState.SetActionsOwnStateMachine( this, FindRootBangStateMachine() );
+		// 	}
+		// 	else if ( stateBundle.state is BangStateMachine stateMachine ) {
+		// 		stateMachine.SetBangContext( world, entity );
+  //           }
+		// 	else {
+		// 		GameLogger.Error( $"unsupported state: {stateBundle.state.GetType().Name}" );
+		// 	}
+		// }
 	}
 
 	private BangStateMachine FindRootBangStateMachine() {

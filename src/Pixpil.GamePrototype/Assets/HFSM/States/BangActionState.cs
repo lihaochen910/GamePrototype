@@ -49,6 +49,7 @@ public class BangActionState< TStateId > : StateBase< TStateId > {
 			foreach ( var hfsmStateAction in _actions ) {
 				hfsmStateAction.Fsm = fsm;
 				hfsmStateAction.RootFsm = rootFsm;
+				hfsmStateAction.State = this as StateBase< string >;
 			}
 		}
 	}

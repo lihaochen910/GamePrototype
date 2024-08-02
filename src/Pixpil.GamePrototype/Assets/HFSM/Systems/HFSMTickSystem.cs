@@ -83,8 +83,7 @@ public class HFSMTickSystem : IUpdateSystem, IFixedUpdateSystem, IReactiveSystem
 					entity.GetHFSMAgent().StateMachine.StateChangedYetAnother -= entity.GetHFSMAgentHistory().StateChangedCallback;
 				}
 				
-				var stateMachineInstance = hfsmScenarioAsset.CreateInstance();
-				stateMachineInstance.SetBangContext( world, entity );
+				var stateMachineInstance = hfsmScenarioAsset.CreateInstance( world, entity );
                 stateMachineInstance.Init();
 
 				if ( entity.TryGetHFSMAgentHistory() is {} hfsmAgentHistory ) {

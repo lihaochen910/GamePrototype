@@ -29,6 +29,14 @@ public abstract class HFSMStateAction {
 	[JsonIgnore]
 	[HideInEditor]
 	public BangStateMachine RootFsm { get; internal set; }
+	
+	[JsonIgnore]
+	[HideInEditor]
+	public StateBase< string > State { get; internal set; }
+
+	[JsonIgnore]
+	[HideInEditor]
+	public string StateName => State.Name;
 
 	[JsonIgnore]
 	[HideInEditor]

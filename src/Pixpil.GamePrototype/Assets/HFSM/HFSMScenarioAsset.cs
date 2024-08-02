@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Immutable;
 using System.Numerics;
+using Bang;
+using Bang.Entities;
 using DigitalRune.Linq;
 using Murder.Assets;
 using Murder.Utilities;
@@ -28,14 +30,20 @@ public class HFSMScenarioAsset : GameAsset {
 	public ImmutableArray< string > Triggers = ImmutableArray< string >.Empty;
 
 	
-	public BangStateMachine CreateInstance() {
+	public BangStateMachine CreateInstance( World world, Entity entity ) {
 		var fsm = new BangStateMachine();
 
 		void BuildFsm( HFSMStateMachineScenario fsmScenario, BangStateMachine contextFsm, BangStateMachine parentFsm ) {
+			contextFsm.World = world;
+			contextFsm.Entity = entity;
 			contextFsm.SetActions( fsmScenario.MakeClonedImpl() );
+			contextFsm.SetActionsBangContext( world, entity );
 			
 			foreach ( var stateScenario in fsmScenario.States ) {
 				var stateInstance = new BangActionState< string >( stateScenario.MakeClonedImpl() );
+				stateInstance.World = world;
+				stateInstance.Entity = entity;
+				stateInstance.SetActionsOwnStateMachine( contextFsm, rootFsm: fsm );
 				contextFsm.AddState( stateScenario.Name, stateInstance );
 				
 				foreach ( var stateTransitionData in stateScenario.Transitions ) {
