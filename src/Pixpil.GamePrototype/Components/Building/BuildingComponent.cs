@@ -59,7 +59,7 @@ public readonly struct BuildingComponent : IComponent {
 public readonly struct BuildingWorkersInConstructingComponent : IComponent {
 	
 	public readonly int Capcity = 0;
-	public readonly ImmutableArray< int > Workers = [];
+	public readonly ImmutableArray< int > Workers = ImmutableArray< int >.Empty;
 	
 	
 	public BuildingWorkersInConstructingComponent( int capcity ) {

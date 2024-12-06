@@ -18,7 +18,7 @@ public readonly struct MonologueInteraction : IInteraction {
 	/// <summary>
 	/// This is the starter situation for the interaction.
 	/// </summary>
-	public readonly int Situation = 0;
+	public readonly string? Situation = string.Empty;
 
 	[Tooltip( "Whether this will pause the game when being played." )]
 	public readonly bool Pause = true;

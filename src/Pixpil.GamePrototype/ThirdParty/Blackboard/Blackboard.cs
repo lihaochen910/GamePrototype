@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Immutable;
 using Bang.Components;
+using Murder.Attributes;
+using Murder.Utilities.Attributes;
 using Murder.Diagnostics;
 
 
 namespace Pixpil.AI;
 
+[RuntimeOnly]
+[DoNotPersistOnSave]
 public readonly struct BlackboardComponent : IComponent {
 	
 	// public readonly BlackboardSource Blackboard;

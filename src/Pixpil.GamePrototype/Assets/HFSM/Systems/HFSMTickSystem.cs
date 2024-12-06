@@ -8,6 +8,7 @@ using Bang.Contexts;
 using Bang.Entities;
 using Bang.Systems;
 using DigitalRune.Collections;
+using Murder;
 using Murder.Core.Graphics;
 using Pixpil.AI;
 using Pixpil.AI.HFSM;

@@ -68,15 +68,6 @@
       "Murder.Interactions.InteractorComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
         "$type": "Murder.Interactions.InteractorComponent"
       },
-      "Pixpil.AI.BlackboardComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
-        "$type": "Pixpil.AI.BlackboardComponent",
-        "Variables": {
-          "Home": {
-            "Value": 0,
-            "VarType": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
-          }
-        }
-      },
       "Pixpil.AI.AiActionExecutorComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
         "$type": "Pixpil.AI.AiActionExecutorComponent",
         "AiActionScenarioAsset": "d404c0e6-33ee-44d2-a936-eb49a5f11c2c"

@@ -1,0 +1,28 @@
+{
+  "$type": "Murder.Assets.WorldAsset",
+  "WorldName": "World",
+  "Order": 1,
+  "Name": "TestWorld",
+  "Guid": "d92d6ba9-68c4-440b-8373-218dabde3af8",
+  "systems": [],
+  "features": [],
+  "folders": {},
+  "filterFolders": {},
+  "entities": {
+    "c2b7ce06-4991-4ea2-a100-f1cb8f5c9130": {
+      "IsDeactivated": false,
+      "ActivateWithParent": false,
+      "guid": "c2b7ce06-4991-4ea2-a100-f1cb8f5c9130",
+      "name": "test",
+      "components": {
+        "Pixpil.Components.InventoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Pixpil.Components.InventoryComponent",
+          "CanExpand": false,
+          "Cells": []
+        }
+      }
+    }
+  },
+  "entitiesToFolder": {},
+  "entitiesToFilter": {}
+}

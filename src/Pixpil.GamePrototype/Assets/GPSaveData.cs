@@ -4,7 +4,7 @@ using Pixpil.Core;
 
 namespace Pixpil.Assets;
 
-public class GPSaveData( int slot, float version ) : SaveData( slot, version ) {
+public class GPSaveData( int saveSlot, float saveVersion ) : SaveData( saveSlot, saveVersion ) {
 	
 	private GameplayBlackboard? _gameplayBlackboard;
 

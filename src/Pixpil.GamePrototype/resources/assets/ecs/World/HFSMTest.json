@@ -1,0 +1,1086 @@
+{
+  "$type": "Murder.Assets.WorldAsset",
+  "WorldName": "World",
+  "Order": 1,
+  "Name": "HFSMTest",
+  "Guid": "4a0211aa-da47-4eb8-97d2-a3799252d281",
+  "systems": [
+    {
+      "Item1": "Pixpil.Systems.HFSMTickSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.MapInitializerSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.OldSchoolPlayerInputSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.StateMachineSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Pixpil.Systems.SimpleFadeScreenSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Editor.Systems.SystemsDiagnosticsSystem, Murder.Editor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    }
+  ],
+  "features": [
+    {
+      "Item1": "95cbe62a-5eaf-499e-97d7-f5b132bc8694",
+      "Item2": true
+    },
+    {
+      "Item1": "f98c18ce-f864-4adf-8e24-bd034ff0ea68",
+      "Item2": true
+    },
+    {
+      "Item1": "382b4792-fcef-4068-9088-0423c902a781",
+      "Item2": true
+    }
+  ],
+  "folders": {
+    "Room": []
+  },
+  "filterFolders": {},
+  "entities": {
+    "7a7fe774-51ba-4d60-88fb-064e96d66bee": {
+      "IsDeactivated": false,
+      "ActivateWithParent": false,
+      "guid": "7a7fe774-51ba-4d60-88fb-064e96d66bee",
+      "name": "HFSM",
+      "components": {
+        "Pixpil.Components.HFSMAgentComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Pixpil.Components.HFSMAgentComponent",
+          "FsmAsset": "9df20542-87e3-4619-9ed0-da3a66450fc5"
+        },
+        "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.PositionComponent",
+          "x": 0,
+          "y": 0
+        },
+        "Pixpil.Components.HFSMAgentHistoryComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Pixpil.Components.HFSMAgentHistoryComponent",
+          "Capacity": 6
+        },
+        "Pixpil.Components.HFSMAgentDrawComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Pixpil.Components.HFSMAgentDrawComponent"
+        }
+      }
+    },
+    "0165cefd-5bb3-4335-8a69-aea207e282fc": {
+      "IsDeactivated": false,
+      "ActivateWithParent": false,
+      "guid": "0165cefd-5bb3-4335-8a69-aea207e282fc",
+      "name": "Player",
+      "components": {
+        "Murder.Components.PositionComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.PositionComponent",
+          "x": 144,
+          "y": 99
+        },
+        "Murder.Components.SpriteComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.SpriteComponent",
+          "TargetSpriteBatch": 0,
+          "AnimationGuid": "cee99b31-38c5-82e4-10ba-6e6a250efaea",
+          "HighlightStyle": 0,
+          "NextAnimations": [],
+          "YSortOffset": 0,
+          "Offset": {
+            "X": 0,
+            "Y": 0
+          },
+          "RotateWithFacing": false,
+          "FlipWithFacing": false,
+          "UseUnscaledTime": false
+        },
+        "Murder.Components.CameraFollowComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.CameraFollowComponent",
+          "Enabled": true,
+          "Style": 0
+        },
+        "Pixpil.Components.OldSchoolAgentComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Pixpil.Components.OldSchoolAgentComponent",
+          "Speed": 3,
+          "TileSize": 24,
+          "Friction": 0
+        },
+        "Pixpil.Components.PlayerComponent, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Pixpil.Components.PlayerComponent",
+          "CurrentState": 0
+        }
+      }
+    },
+    "da5e4c4c-42e0-4d71-b558-7df59ac30ddf": {
+      "IsDeactivated": false,
+      "ActivateWithParent": false,
+      "guid": "da5e4c4c-42e0-4d71-b558-7df59ac30ddf",
+      "name": "Room",
+      "components": {
+        "Murder.Components.RoomComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.RoomComponent",
+          "Floor": "51bfc9ac-4cc5-43c2-833d-7632a4aff68e"
+        },
+        "Murder.Components.TileGridComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.TileGridComponent",
+          "Grid": {
+            "gridMap": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 24,
+            "height": 24,
+            "origin": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "Width": 24,
+          "Height": 24,
+          "Origin": {
+            "X": 0,
+            "Y": 0
+          }
+        }
+      }
+    },
+    "1648519a-b6ec-4e49-875e-e520bed0a6f2": {
+      "IsDeactivated": false,
+      "ActivateWithParent": false,
+      "guid": "1648519a-b6ec-4e49-875e-e520bed0a6f2",
+      "name": "Pathfind Grid Entity",
+      "components": {
+        "Murder.Components.PathfindGridComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.PathfindGridComponent",
+          "Cells": [
+            {
+              "Point": {
+                "X": -238,
+                "Y": -330
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -237,
+                "Y": -329
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -236,
+                "Y": -329
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -235,
+                "Y": -328
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -233,
+                "Y": -327
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -232,
+                "Y": -326
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -232,
+                "Y": -325
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -231,
+                "Y": -325
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -231,
+                "Y": -324
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -230,
+                "Y": -324
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -233,
+                "Y": -325
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -234,
+                "Y": -326
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -234,
+                "Y": -325
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -232,
+                "Y": -324
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -231,
+                "Y": -323
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -230,
+                "Y": -322
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -235,
+                "Y": -326
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -235,
+                "Y": -325
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -234,
+                "Y": -323
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -249,
+                "Y": -341
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -251,
+                "Y": -341
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -250,
+                "Y": -340
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -248,
+                "Y": -340
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -247,
+                "Y": -339
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -246,
+                "Y": -339
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -243,
+                "Y": -338
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -242,
+                "Y": -338
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -241,
+                "Y": -337
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -240,
+                "Y": -337
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -239,
+                "Y": -337
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -239,
+                "Y": -336
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": 0,
+                "Y": 2
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": 0,
+                "Y": 3
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": 0,
+                "Y": 4
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": 1,
+                "Y": 4
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": 1,
+                "Y": 5
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": -4,
+                "Y": -4
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": -1,
+                "Y": -5
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": 0,
+                "Y": -5
+              },
+              "Weight": 0,
+              "CollisionMask": 0
+            },
+            {
+              "Point": {
+                "X": -2,
+                "Y": -5
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            },
+            {
+              "Point": {
+                "X": -2,
+                "Y": -1
+              },
+              "Weight": 100,
+              "CollisionMask": 96
+            }
+          ]
+        }
+      }
+    },
+    "14f7b8b2-8c26-4237-8bc3-30cc0f8adb16": {
+      "IsDeactivated": false,
+      "ActivateWithParent": false,
+      "guid": "14f7b8b2-8c26-4237-8bc3-30cc0f8adb16",
+      "name": "Tileset",
+      "components": {
+        "Murder.Components.TilesetComponent, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": {
+          "$type": "Murder.Components.TilesetComponent",
+          "Tilesets": [
+            "17d77607-0205-49f1-b911-b9d89948d737",
+            "cfe9222d-82e2-4a2f-8539-d76c2c91656e",
+            "c7128b46-86aa-4dd1-92cd-4c57a3c4f61c"
+          ]
+        }
+      }
+    }
+  },
+  "entitiesToFolder": {},
+  "entitiesToFilter": {}
+}

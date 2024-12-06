@@ -47,7 +47,7 @@ internal class BaseHudSystem : IStartupSystem, IMurderRenderSystem {
 			render.UiBatch.DrawText( PPFonts.FusionPixel, $"食物: {inventory.GetItemCount( _foodItemType )}", new Vector2( render.Camera.Width + offsetX, 0 ), drawInfo );
 			render.UiBatch.DrawText( PPFonts.FusionPixel, $"木: {inventory.GetItemCount( _woodItemType )}", new Vector2( render.Camera.Width + offsetX, 12 ), drawInfo );
 			render.UiBatch.DrawText( PPFonts.FusionPixel, $"石: {inventory.GetItemCount( _stoneItemType )}", new Vector2( render.Camera.Width + offsetX, 24 ), drawInfo );
-			render.UiBatch.DrawText( MurderFonts.PixelFont, $"Popula: {gamePlayBlackboard.Population}", new Vector2( render.Camera.Width + offsetX, 36 ), drawInfo );
+			render.UiBatch.DrawText( PPFonts.FusionPixel, $"Popula: {gamePlayBlackboard.Population}", new Vector2( render.Camera.Width + offsetX, 36 ), drawInfo );
 		}
 	}
 

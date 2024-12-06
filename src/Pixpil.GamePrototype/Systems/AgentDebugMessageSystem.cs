@@ -44,7 +44,7 @@ internal class AgentDebugMessageSystem : IReactiveSystem, IMurderRenderSystem {
 			}
 
 			var agentDebugMessage = entity.GetAgentDebugMessage();
-			render.UiBatch.DrawText( MurderFonts.PixelFont, $"{agentDebugMessage.Msg}", render.Camera.WorldToScreenPosition( entity.GetPosition().ToVector2() ), new DrawInfo( 0.2f ) {
+			render.UiBatch.DrawText( PPFonts.FusionPixel, $"{agentDebugMessage.Msg}", render.Camera.WorldToScreenPosition( entity.GetPosition().ToVector2() ), new DrawInfo( 0.2f ) {
 				Scale = Vector2.One * agentDebugMessage.Size,
 				Color = Color.Green
 			} );

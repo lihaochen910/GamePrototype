@@ -24,7 +24,7 @@ public class GamePrototypePreferences : GamePreferences {
     /// </summary>
     public int PopulationFoodConsume { get; protected set; }
     
-    public GamePrototypePreferences() : base() { }
+    // public GamePrototypePreferences() : base() { }
 
     public override void OnPreferencesChangedImpl() {
         // Game.Sound.SetVolume(id: PGGame.Profile.MusicBus, _musicVolume);

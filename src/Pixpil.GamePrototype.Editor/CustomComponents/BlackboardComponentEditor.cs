@@ -44,7 +44,7 @@ public class BlackboardComponentEditor : CustomComponent {
 		_variablesMember = EditorMember.Create( typeof( BlackboardComponent ).GetField( nameof( BlackboardComponent.Variables ), BindingFlags.Public | BindingFlags.Instance ) );
 	}
 
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 		var blackboardComponent = ( BlackboardComponent )target;
 		bool changed = false;
 

@@ -21,7 +21,7 @@ public class HFSMStateScenarioEditor : CustomComponent {
 		return CollectionHelper.ToStringDictionary( conditionImplTypes, a => a.Name, a => a );
 	} );
 	
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 		var stateScenario = target as HFSMStateScenario;
 		if ( stateScenario is null ) {
 			return false;
@@ -86,7 +86,7 @@ public class HFSMStateScenarioEditor : CustomComponent {
 					ImGui.SameLine();
 					ImGui.Text( $"{stateAction.GetType().Name}" );
 					
-					modified |= CustomComponent.ShowEditorOf( ref stateAction, CustomComponentsFlags.SkipSameLineForFilterField );
+					modified |= CustomComponent.ShowEditorOf( ref stateAction );
 				}
 				else {
 					ImGui.SameLine();
@@ -139,7 +139,7 @@ public class HFSMStateScenarioEditor : CustomComponent {
 [CustomComponentOf(typeof(HFSMStateMachineScenario))]
 public class HFSMStateMachineScenarioEditor : HFSMStateScenarioEditor {
 	
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 		var stateMachineScenario = target as HFSMStateMachineScenario;
 		if ( stateMachineScenario is null ) {
 			return false;
@@ -167,7 +167,7 @@ public class HFSMStateMachineScenarioEditor : HFSMStateScenarioEditor {
 		
 		ImGui.Separator();
         
-		return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+		return base.DrawAllMembersWithTable( ref target );
 	}
 
 }

@@ -289,7 +289,7 @@ public class MonologueUiStateMachine : StateMachine {
                 return null;
             }
 
-            return result;
+            return result.Portrait;
         }
 
         return null;

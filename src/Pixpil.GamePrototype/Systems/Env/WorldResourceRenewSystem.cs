@@ -8,7 +8,7 @@ using Pixpil.Components;
 using Pixpil.Data;
 
 
-namespace Pixpil.Systems; 
+namespace Pixpil.Systems;
 
 [Filter( ContextAccessorFilter.AllOf, ContextAccessorKind.Write, typeof( WorldResourceRenewableComponent ), typeof( InventoryComponent ) )]
 public class WorldResourceRenewSystem : IStartupSystem, IUpdateSystem {

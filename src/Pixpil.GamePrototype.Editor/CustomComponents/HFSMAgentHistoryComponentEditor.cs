@@ -12,13 +12,13 @@ namespace Pixpil.GamePrototype.Editor.CustomComponents;
 [CustomComponentOf( typeof( HFSMAgentHistoryComponent ) )]
 public class HFSMAgentHistoryComponentEditor : CustomComponent {
 
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 
 		var playingInEditor = Architect.Instance != null && Architect.Instance.IsPlayingGame;
 		if ( playingInEditor ) {
 			var hfsmAgentHistoryComponent = ( HFSMAgentHistoryComponent )target;
 			if ( hfsmAgentHistoryComponent.Deque is null ) {
-				return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+				return base.DrawAllMembersWithTable( ref target );
 			}
 
 			if ( ImGui.BeginTable( "HFSMScenarioAsset Table", 2, ImGuiTableFlags.Borders | ImGuiTableFlags.Resizable | ImGuiTableFlags.SizingFixedFit ) ) {
@@ -61,7 +61,7 @@ public class HFSMAgentHistoryComponentEditor : CustomComponent {
 			return false;
 		}
 
-		return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+		return base.DrawAllMembersWithTable( ref target );
 	}
 	
 }

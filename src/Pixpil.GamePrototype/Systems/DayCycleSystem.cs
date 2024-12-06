@@ -122,7 +122,7 @@ internal class DayCycleTipsSystem : IMessagerSystem, IMurderRenderSystem, IUpdat
 
 	public void Draw( RenderContext render, Context context ) {
 		// if ( _showTips ) {
-			render.UiBatch.DrawText( MurderFonts.PixelFont, $"Day {_dayProgress.Day}", new Vector2( 0, 0 ), new DrawInfo( Color.Cyan, 1f ) );
+			render.UiBatch.DrawText( PPFonts.FusionPixel, $"Day {_dayProgress.Day}", new Vector2( 0, 0 ), new DrawInfo( Color.Cyan, 1f ) );
 		// }
 
 		const float size = 15f;

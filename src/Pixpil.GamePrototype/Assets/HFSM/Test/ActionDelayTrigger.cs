@@ -40,9 +40,11 @@ public class ActionDelayTrigger : HFSMStateAction {
 		}
 	}
 
+#if MURDER
 	public override void OnMurderDraw( RenderContext render ) {
 		render.UiBatch.DrawText( MurderFonts.PixelFont, $"[ActionDelayTrigger]: {_timer:0.0}/{Delay}", new Vector2( 0, 0 ) );
 	}
+#endif
 
 	private void ProcessTrigger() {
 		switch ( TriggerTarget ) {

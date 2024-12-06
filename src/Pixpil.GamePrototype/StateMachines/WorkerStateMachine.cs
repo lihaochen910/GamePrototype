@@ -131,9 +131,9 @@ public class WorkerAnimationStateMachine : StateMachine {
 
 
 	private bool CheckBlackboardBool( string bbVar ) {
-		if ( _parent.TryGetBlackboard() is BlackboardComponent blackboardComponent ) {
-			return blackboardComponent.GetValue< bool >( bbVar );
-		}
+		// if ( _parent.TryGetBlackboard() is BlackboardComponent blackboardComponent ) {
+		// 	return blackboardComponent.GetValue< bool >( bbVar );
+		// }
 
 		return false;
 	}

@@ -39,6 +39,22 @@
     {
       "Item1": "Murder.Systems.Graphics.TilemapAndFloorRenderSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Graphics.TilemapNoFloorRenderSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Graphics.SpriteNineSliceRenderSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.Physics.StaticRenderQuadTreeSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
+    },
+    {
+      "Item1": "Murder.Systems.TextureRenderSystem, Murder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Item2": true
     }
   ],
   "features": []

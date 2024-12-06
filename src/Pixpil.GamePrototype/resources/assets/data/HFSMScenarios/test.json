@@ -22,6 +22,10 @@
             "Trigger": "Ev1",
             "Delay": 1,
             "IsActived": true
+          },
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionTestInitCall",
+            "IsActived": true
           }
         ],
         "Transitions": [
@@ -277,6 +281,10 @@
     "Impl": [
       {
         "$type": "Pixpil.AI.HFSM.Test.ActionDrawActiveHierarchyPath",
+        "IsActived": true
+      },
+      {
+        "$type": "Pixpil.AI.HFSM.Test.ActionTestInitCall",
         "IsActived": true
       }
     ],

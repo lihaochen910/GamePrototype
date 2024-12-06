@@ -89,62 +89,7 @@ namespace Pixpil.Data {
 			_count = count;
 		}
 	}
-    
-    
-  //   public class Inventory {
-		//
-		// // internal static readonly ResourcePool< InventoryEntry > InventoryEntryPool = new (
-		// // 	create: () => new InventoryEntry(), // Create
-		// // 	initialize: null,                   // Initialize
-		// // 	uninitialize: entry => {			// Uninitialize
-		// // 		entry.ItemType = null;
-		// // 		entry.Reset();
-		// // 	}
-		// // );
-		//
-		// /// <summary>
-		// /// for default ref return value,
-		// /// dont modify!!!
-		// /// </summary>
-		// public static InventoryEntry EmptyCell = InventoryEntry.Empty;
-  //   	
-  //   	public InventoryEntry[] Cells = new InventoryEntry[ 0 ];
-  //
-		// public int Capacity => Cells.Length;
-  //   
-		// [JsonConstructor]
-  //   	public Inventory( [JsonProperty(nameof(Cells))] InventoryEntry[] cells ) {
-  //   		Cells = cells.ToArray();
-  //   	}
-  //
-		// public Inventory( Inventory other ) {
-		// 	Cells = new InventoryEntry[ other.Capacity ];
-		// 	for ( var i = 0; i < other.Cells.Length; i++ ) {
-		// 		var newEntry = new InventoryEntry();
-		// 		newEntry.ItemType = other.Cells[ i ].ItemType;
-		// 		newEntry.Count = other.Cells[ i ].Count;
-		// 		Cells[ i ] = newEntry;
-		// 	}
-		// }
-  //   
-  //   	public Inventory( int size ) {
-		// 	Cells = new InventoryEntry[ size ];
-  //   	}
-  //
-		// /// <summary>
-		// /// !!!
-		// /// </summary>
-		// public void Free() {
-		// 	// if ( !Cells.IsDefaultOrEmpty ) {
-		// 	// 	// foreach ( var entry in Cells ) {
-		// 	// 	// 	InventoryEntryPool.Recycle( entry );
-		// 	// 	// }
-		// 	// 	Cells = ImmutableArray< InventoryEntry >.Empty;
-		// 	// }
-		// }
-		//
-  //   }
-
+	
 }
 
 
@@ -155,7 +100,7 @@ namespace Pixpil.Components {
 	public readonly struct InventoryComponent : IComponent {
 
 		public readonly bool CanExpand;
-		public readonly ImmutableArray< InventoryEntry > Cells = [];
+		public readonly ImmutableArray< InventoryEntry > Cells = ImmutableArray< InventoryEntry >.Empty;
 		
 		public int Capacity => Cells.Length;
 		

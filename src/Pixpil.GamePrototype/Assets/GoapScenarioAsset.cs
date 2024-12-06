@@ -17,7 +17,6 @@ using Murder.Assets;
 using Murder.Attributes;
 using Murder.Core.Graphics;
 using Murder.Diagnostics;
-using Murder.Editor.Components;
 using Murder.Services;
 using Murder.Utilities;
 using Murder.Utilities.Attributes;
@@ -980,19 +979,19 @@ namespace Pixpil.AI {
 		
 		public void Draw( RenderContext render, Context context ) {
 
-			if ( context.World.TryGetUnique< EditorComponent >() is {} editorComponent && editorComponent.EditorHook != null && editorComponent.EditorHook.ShowStates ) {
-				var drawInfo = new DrawInfo( Color.White, 0.2f ) { Outline = Color.Black, Scale = Vector2.One, Offset = new Vector2( 0, 0 ) };
-				var statusDrawInfo = new DrawInfo( Color.Green, 0.2f ) { Scale = Vector2.One * 0.8f, Offset = new Vector2( 0, 0 ) };
-			
-				foreach ( var entity in context.Entities ) {
-					if ( entity.HasInCamera() && entity.TryGetGoapPlanInExecuting() is {} goapPlanInExecutingComponent ) {
-						var entityInScreen = entity.GetPosition().ToVector2() + new Vector2( 10f, 38f );
-						render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{goapPlanInExecutingComponent.Action?.Name}", entityInScreen + new Vector2( 0, 0 ), drawInfo );
-						render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{goapPlanInExecutingComponent.ActionExecuteStatus}", entityInScreen + new Vector2( 0, 8 ), statusDrawInfo );
-						// render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{goapPlanInExecutingComponent.Action?.}", entityInScreen + new Vector2( 0, 16 ), statusDrawInfo );
-					}
-				}
-			}
+			// if ( context.World.TryGetUnique< EditorComponent >() is {} editorComponent && editorComponent.EditorHook != null && editorComponent.EditorHook.ShowStates ) {
+			// 	var drawInfo = new DrawInfo( Color.White, 0.2f ) { Outline = Color.Black, Scale = Vector2.One, Offset = new Vector2( 0, 0 ) };
+			// 	var statusDrawInfo = new DrawInfo( Color.Green, 0.2f ) { Scale = Vector2.One * 0.8f, Offset = new Vector2( 0, 0 ) };
+			//
+			// 	foreach ( var entity in context.Entities ) {
+			// 		if ( entity.HasInCamera() && entity.TryGetGoapPlanInExecuting() is {} goapPlanInExecutingComponent ) {
+			// 			var entityInScreen = entity.GetPosition().ToVector2() + new Vector2( 10f, 38f );
+			// 			render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{goapPlanInExecutingComponent.Action?.Name}", entityInScreen + new Vector2( 0, 0 ), drawInfo );
+			// 			render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{goapPlanInExecutingComponent.ActionExecuteStatus}", entityInScreen + new Vector2( 0, 8 ), statusDrawInfo );
+			// 			// render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{goapPlanInExecutingComponent.Action?.}", entityInScreen + new Vector2( 0, 16 ), statusDrawInfo );
+			// 		}
+			// 	}
+			// }
 		}
 		
 		private void SetupEntityForExecute( World world, Entity entity ) {

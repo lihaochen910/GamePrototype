@@ -1,6 +1,7 @@
 using System;
 using Bang.Components;
 using Murder.Attributes;
+using Murder.Utilities.Attributes;
 using Pixpil.AI;
 using Pixpil.AI.HFSM;
 
@@ -12,7 +13,7 @@ public readonly struct HFSMAgentComponent : IComponent {
 	[GameAssetId< HFSMScenarioAsset >]
 	public readonly Guid FsmAsset;
 	
-	[System.Text.Json.Serialization.JsonIgnore, HideInEditor]
+	[System.Text.Json.Serialization.JsonIgnore, HideInEditor, RuntimeOnly]
 	public readonly BangStateMachine StateMachine;
 	
 	public HFSMAgentComponent( Guid fsmAsset ) {

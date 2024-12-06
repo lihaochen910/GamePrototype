@@ -14,8 +14,6 @@ using Murder;
 using Murder.Assets;
 using Murder.Attributes;
 using Murder.Core.Graphics;
-using Murder.Editor.Components;
-using Murder.Services;
 using Murder.Utilities;
 using Murder.Utilities.Attributes;
 
@@ -26,9 +24,9 @@ namespace Pixpil.AI {
 	using Pixpil.Messages;
     
     public enum UtilityAiEvaluateMethod : byte {
-    		Interval,
-    		Message
-    	}
+    	Interval,
+    	Message
+    }
 
 	public sealed class UtilityAiAction {
 		public string Name;

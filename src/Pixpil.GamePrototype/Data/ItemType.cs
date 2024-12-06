@@ -2,7 +2,7 @@ using System;
 using Pixpil.Services;
 
 
-namespace Pixpil.Data; 
+namespace Pixpil.Data;
 
 public class ItemType {
 	
@@ -13,7 +13,7 @@ public class ItemType {
 	}
 
 	public override bool Equals( object obj ) {
-		if ( obj is ItemType otherItemType && otherItemType != null ) {
+		if ( obj is ItemType otherItemType ) {
 			return Id == otherItemType.Id;
 		}
 		return base.Equals( obj );

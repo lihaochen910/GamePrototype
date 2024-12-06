@@ -12,7 +12,7 @@ namespace Pixpil.GamePrototype.Editor.CustomComponents;
 [CustomComponentOf(typeof(GoapAgentComponent))]
 public class GoapAgentComponentEditor : CustomComponent {
 
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 
 		var playingInEditor = Architect.Instance != null && Architect.Instance.IsPlayingGame;
 		if ( playingInEditor ) {
@@ -179,9 +179,9 @@ public class GoapAgentComponentEditor : CustomComponent {
 			ImGui.Unindent( 12 );
 #endif
 			ImGui.Spacing();
-			return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+			return base.DrawAllMembersWithTable( ref target );
 		}
 		
-		return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+		return base.DrawAllMembersWithTable( ref target );
 	}
 }

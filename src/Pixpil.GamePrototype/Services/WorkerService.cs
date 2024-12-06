@@ -4,7 +4,7 @@ using Bang.Entities;
 using Pixpil.Components;
 
 
-namespace Pixpil.Services; 
+namespace Pixpil.Services;
 
 public static class WorkerService {
 	

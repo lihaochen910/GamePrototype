@@ -14,7 +14,7 @@ public class GameplayBlackboard : IBlackboard {
 	public int Population = 1;
 	
 	public bool HasPendingConstructBuilding;
-	public ImmutableArray< int > PendingConstructBuildings;
+	public ImmutableArray< int > PendingConstructBuildings = ImmutableArray< int >.Empty;
 	
 	
 }

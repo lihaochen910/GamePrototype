@@ -14,7 +14,7 @@ namespace Pixpil.GamePrototype.Editor.CustomComponents;
 [CustomComponentOf( typeof( UtilityAiAgentComponent ) )]
 public class UtilityAiAgentComponentEditor : CustomComponent {
 
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 
 		var playingInEditor = Architect.Instance != null && Architect.Instance.IsPlayingGame;
 		if ( playingInEditor ) {
@@ -61,7 +61,7 @@ public class UtilityAiAgentComponentEditor : CustomComponent {
 #endif
 		}
 
-		return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+		return base.DrawAllMembersWithTable( ref target );
 	}
 
 	private void DrawDebugConsideration( UtilityAiConsideration consideration ) {

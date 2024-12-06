@@ -4,7 +4,7 @@ using Murder.Utilities;
 using Pixpil.Data;
 
 
-namespace Pixpil.Services; 
+namespace Pixpil.Services;
 
 public static class ItemTypeServices {
 

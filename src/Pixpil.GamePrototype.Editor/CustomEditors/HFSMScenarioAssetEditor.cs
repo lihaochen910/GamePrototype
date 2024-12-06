@@ -83,7 +83,7 @@ public class HFSMScenarioAssetEditor : CustomEditor {
 					
 						if ( _nodeEditor.SelectedNode is HFSMStateNode stateNode ) {
 							var stateScenario = stateNode.Data;
-							_hfsmScenarioAsset.FileChanged |= CustomComponent.ShowEditorOf( ref stateScenario, CustomComponentsFlags.SkipSameLineForFilterField );
+							_hfsmScenarioAsset.FileChanged |= CustomComponent.ShowEditorOf( ref stateScenario );
 						}
 					}
 					else {

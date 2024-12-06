@@ -51,10 +51,6 @@
     {
       "Item1": "Murder.Editor.Systems.Debug.BlackboardTrackerSystem, Murder.Editor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
       "Item2": true
-    },
-    {
-      "Item1": "Pixpil.Systems.DebugDrawDarkFogSafeAreaSystem, Pixpil.GamePrototype, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "Item2": true
     }
   ],
   "features": []

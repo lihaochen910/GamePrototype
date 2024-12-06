@@ -22,13 +22,13 @@ public class AiActionInExecutingComponentEditor : CustomComponent {
 		return Game.Profile.Theme.White;
 	}
 	
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 
 		var playingInEditor = Architect.Instance != null && Architect.Instance.IsPlayingGame;
 		if ( playingInEditor ) {
 			var aiActionInExecutingComponent = ( AiActionInExecutingComponent )target;
 			if ( aiActionInExecutingComponent.Action is null ) {
-				return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+				return base.DrawAllMembersWithTable( ref target );
 			}
 
 			for ( var i = 0; i < aiActionInExecutingComponent.ActionCloned.Length; i++ ) {
@@ -62,7 +62,7 @@ public class AiActionInExecutingComponentEditor : CustomComponent {
 			return false;
 		}
 
-		return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+		return base.DrawAllMembersWithTable( ref target );
 	}
 	
 }

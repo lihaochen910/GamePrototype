@@ -114,12 +114,12 @@ internal class PlacerBuildingSystem : IUpdateSystem, IReactiveSystem, IMurderRen
                 continue;
             }
             // render.DebugBatch.DrawText( PPFonts.PixelFont, $"{entity.GetPosition().ToVector2()}", render.Camera.WorldToScreenPosition( entity.GetPosition().ToVector2() ), new DrawInfo( 0.2f ) {
-            render.DebugBatch.DrawText( MurderFonts.PixelFont, $"{entity.GetPosition().ToVector2()}", entity.GetPosition().ToVector2() + new Vector2( 2, -2 ), new DrawInfo( 0.2f ) {
+            render.DebugBatch.DrawText( PPFonts.FusionPixel, $"{entity.GetPosition().ToVector2()}", entity.GetPosition().ToVector2() + new Vector2( 2, -2 ), new DrawInfo( 0.2f ) {
                 Scale = Vector2.One * 1f,
                 Color = Color.Cyan
             } );
             if ( entity.HasPlacingBuildingHasObstacle() ) {
-                render.DebugBatch.DrawText( MurderFonts.PixelFont, $"cannot place here!", entity.GetPosition().ToVector2() + new Vector2( 2, 5 ), new DrawInfo( 0.21f ) {
+                render.DebugBatch.DrawText( PPFonts.FusionPixel, $"cannot place here!", entity.GetPosition().ToVector2() + new Vector2( 2, 5 ), new DrawInfo( 0.21f ) {
                     Scale = Vector2.One * 1f,
                     Color = Color.Red * .8f
                 } );

@@ -1,0 +1,43 @@
+{
+  "$type": "Pixpil.AI.HFSMScenarioAsset",
+  "RootFsmScenario": {
+    "States": [
+      {
+        "Name": "NewState",
+        "IsStartState": true,
+        "IsGhostState": false,
+        "Impl": [
+          {
+            "$type": "Pixpil.AI.HFSM.Test.ActionLog",
+            "Msg": "Start!",
+            "LogOnInit": false,
+            "LogOnEnter": true,
+            "LogOnLogic": false,
+            "LogOnExit": false,
+            "IsActived": true
+          }
+        ],
+        "Transitions": [],
+        "GlobalTransitions": [],
+        "PositionInEditor": {
+          "X": 697,
+          "Y": 541
+        }
+      }
+    ],
+    "ChildrenStateMachine": [],
+    "Name": "Empty",
+    "IsStartState": false,
+    "IsGhostState": false,
+    "Impl": [],
+    "Transitions": [],
+    "GlobalTransitions": [],
+    "PositionInEditor": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  "Triggers": [],
+  "Name": "empty",
+  "Guid": "a42351b1-988f-47e5-87ac-d3f0daffccd4"
+}

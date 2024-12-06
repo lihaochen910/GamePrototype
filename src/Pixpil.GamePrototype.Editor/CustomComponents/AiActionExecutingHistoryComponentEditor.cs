@@ -12,13 +12,13 @@ namespace Pixpil.GamePrototype.Editor.CustomComponents;
 [CustomComponentOf( typeof( AiActionExecutingHistoryComponent ) )]
 public class AiActionExecutingHistoryComponentEditor : CustomComponent {
 
-	protected override bool DrawAllMembersWithTable( ref object target, bool sameLineFilter ) {
+	protected override bool DrawAllMembersWithTable( ref object target ) {
 
 		var playingInEditor = Architect.Instance != null && Architect.Instance.IsPlayingGame;
 		if ( playingInEditor ) {
 			var aiActionExecutingHistoryComponent = ( AiActionExecutingHistoryComponent )target;
 			if ( aiActionExecutingHistoryComponent.Deque is null ) {
-				return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+				return base.DrawAllMembersWithTable( ref target );
 			}
 
 			foreach ( var item in aiActionExecutingHistoryComponent.Deque ) {
@@ -45,7 +45,7 @@ public class AiActionExecutingHistoryComponentEditor : CustomComponent {
 			return false;
 		}
 
-		return base.DrawAllMembersWithTable( ref target, sameLineFilter );
+		return base.DrawAllMembersWithTable( ref target );
 	}
 	
 }
