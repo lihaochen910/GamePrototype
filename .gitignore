@@ -21,3 +21,8 @@
 src/Pixpil.GamePrototype/packed
 !src/Pixpil.GamePrototype/packed/atlas
 src/Pixpil.GamePrototype/resources/assets/data/Generated
+src/Pixpil.GamePrototype/bin
+src/Pixpil.GamePrototype/obj
+src/Pixpil.GamePrototype.Editor/bin
+src/Pixpil.GamePrototype.Editor/obj
+src/PxpGameJam2024/bin

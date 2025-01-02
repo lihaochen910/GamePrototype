@@ -1,0 +1,36 @@
+﻿<Project>
+    <PropertyGroup>
+        <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+        <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
+    </PropertyGroup>
+    <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
+
+    <PropertyGroup>
+        <BaseIntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</BaseIntermediateOutputPath>
+        <BaseIntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latestmajor</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Spectre.Console" Version="0.49.1" />
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <IntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</IntermediateOutputPath>
+        <IntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</IntermediateOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+<!--        <PublishAot>true</PublishAot>-->
+        <IntermediateOutputPath Condition=" '$(OS)' == 'Windows_NT' ">D:\GitWorkspace\GameScriptLibrary\$(MSBuildProjectName)\obj</IntermediateOutputPath>
+        <IntermediateOutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)/GitWorkspace/GameScriptLibrary/$(MSBuildProjectName)/obj</IntermediateOutputPath>
+    </PropertyGroup>
+
+    <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
+    
+</Project>
